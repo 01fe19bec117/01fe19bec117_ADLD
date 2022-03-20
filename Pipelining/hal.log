@@ -1,0 +1,466 @@
+hal(64): 15.20-s051: (c) Copyright 1995-2018 Cadence Design Systems, Inc.
+hal: Options:   -cdslib /home/adld27/sam/Pipelining/cds.lib -logfile hal.log worklib.pipe_tb:v.
+hal: Snapshot:  worklib.pipe_tb:v.
+hal: Workspace: /home/adld27/sam/Pipelining.
+hal: Date: Sat Mar 19 10:59:55 IST 2022.
+
+hal: Running on elaborated SNAPSHOT.....
+
+  ==========================================================================
+Performing lint checks 
+
+halcheck(64): 15.20-s051: (c) Copyright 1995-2018 Cadence Design Systems, Inc.
+visadev(64): 15.20-s051: (c) Copyright 1995-2018 Cadence Design Systems, Inc.
+module pipe_tb;
+|
+halcheck: *W,NEEDIO (./pipe_tb.v,1|0): Top-level module 'pipe_tb' has no inputs/outputs/inouts.
+pipe_ex mypipe (F,A,B,C,D,clk);
+|
+halcheck: *W,CBYNAM (./pipe_tb.v,8|0): Port connections for instance 'mypipe' of module 'pipe_ex' should be made by name rather than by positional ordered list.
+wire [N-1:0] F;
+|
+halcheck: *W,LCVARN (./pipe_tb.v,4|0): Net name 'F' uses uppercase characters.
+reg [N-1:0] A,B,C,D;
+|
+halcheck: *W,LCVARN (./pipe_tb.v,5|0): Register name 'A' uses uppercase characters.
+reg [N-1:0] A,B,C,D;
+|
+halcheck: *W,LCVARN (./pipe_tb.v,5|0): Register name 'B' uses uppercase characters.
+reg [N-1:0] A,B,C,D;
+|
+halcheck: *W,LCVARN (./pipe_tb.v,5|0): Register name 'C' uses uppercase characters.
+reg [N-1:0] A,B,C,D;
+|
+halcheck: *W,LCVARN (./pipe_tb.v,5|0): Register name 'D' uses uppercase characters.
+parameter N=10;
+|
+halcheck: *N,IDLENG (./pipe_tb.v,3|0): Identifier name 'N' is not of appropriate length (4 to 16 characters).
+parameter N=10;
+|
+halcheck: *W,PRMVAL (./pipe_tb.v,3|0): Bit width not specified for parameter 'N'.
+parameter N=10;
+|
+halcheck: *W,PRMBSE (./pipe_tb.v,3|0): Base not specified for parameter 'N'.
+initial clk=0;
+|
+halcheck: *W,SEPLIN (./pipe_tb.v,9|0): Use a separate line for each HDL statement.
+initial clk=0;
+|
+halcheck: *W,IMPDTC (./pipe_tb.v,9|0): Expression '0' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit pipe_tb.
+initial clk=0;
+|
+halcheck: *W,INTTOB (./pipe_tb.v,9|0): Assigning a 0 or 1 (32 bits) to a single-bit variable in module/design-unit pipe_tb.
+initial clk=0;
+|
+halcheck: *W,TRUNCZ (./pipe_tb.v,9|0): Truncation in constant conversion without a loss of bits in module/design-unit pipe_tb.
+initial clk=0;
+|
+halcheck: *W,REVROP (./pipe_tb.v,9|0): Register 'clk' is being read/assigned outside the process in which it was assigned using a blocking assignment.
+halcheck: (./pipe_tb.v,10): Assigned using blocking assignment in this process.
+always #10 clk=~clk;
+|
+halcheck: *W,EVTRIG (./pipe_tb.v,10|0): Always block with no event trigger at the start of the block in module 'pipe_tb'.
+always #10 clk=~clk;
+|
+halcheck: *W,NBGEND (./pipe_tb.v,10|0): Missing begin/end statement in the 'always' block.
+always #10 clk=~clk;
+|
+halcheck: *W,SEPLIN (./pipe_tb.v,10|0): Use a separate line for each HDL statement.
+always #10 clk=~clk;
+|
+halcheck: *W,RDBFAS (./pipe_tb.v,10|0): Register 'clk', assigned using blocking assignment, is being read before getting assigned.
+begin
+|
+halcheck: *W,NOBLKN (./pipe_tb.v,13|0): Each block should be labeled with a meaningful name.
+#5 A=10; B=12; C=6; D=3;
+|
+halcheck: *W,IMPDTC (./pipe_tb.v,14|0): Expression '10' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit pipe_tb.
+#5 A=10; B=12; C=6; D=3;
+|
+halcheck: *W,TRUNCZ (./pipe_tb.v,14|0): Truncation in constant conversion without a loss of bits in module/design-unit pipe_tb.
+#5 A=10; B=12; C=6; D=3;
+|
+halcheck: *W,CONSBS (./pipe_tb.v,14|0): Base ('d, 'b, 'h, 'o) not specified for constant 10 in module/design-unit pipe_tb.
+#5 A=10; B=12; C=6; D=3;
+|
+halcheck: *W,SEPLIN (./pipe_tb.v,14|0): Use a separate line for each HDL statement.
+#5 A=10; B=12; C=6; D=3;
+|
+halcheck: *W,IMPDTC (./pipe_tb.v,14|0): Expression '12' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit pipe_tb.
+#5 A=10; B=12; C=6; D=3;
+|
+halcheck: *W,CONSBS (./pipe_tb.v,14|0): Base ('d, 'b, 'h, 'o) not specified for constant 12 in module/design-unit pipe_tb.
+#5 A=10; B=12; C=6; D=3;
+|
+halcheck: *W,IMPDTC (./pipe_tb.v,14|0): Expression '6' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit pipe_tb.
+#5 A=10; B=12; C=6; D=3;
+|
+halcheck: *W,CONSBS (./pipe_tb.v,14|0): Base ('d, 'b, 'h, 'o) not specified for constant 6 in module/design-unit pipe_tb.
+#5 A=10; B=12; C=6; D=3;
+|
+halcheck: *W,IMPDTC (./pipe_tb.v,14|0): Expression '3' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit pipe_tb.
+#5 A=10; B=12; C=6; D=3;
+|
+halcheck: *W,CONSBS (./pipe_tb.v,14|0): Base ('d, 'b, 'h, 'o) not specified for constant 3 in module/design-unit pipe_tb.
+#20 A=10; B=10; C=5; D=3;
+|
+halcheck: *W,IMPDTC (./pipe_tb.v,15|0): Expression '10' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit pipe_tb.
+#20 A=10; B=10; C=5; D=3;
+|
+halcheck: *W,TRUNCZ (./pipe_tb.v,15|0): Truncation in constant conversion without a loss of bits in module/design-unit pipe_tb.
+#20 A=10; B=10; C=5; D=3;
+|
+halcheck: *W,CONSBS (./pipe_tb.v,15|0): Base ('d, 'b, 'h, 'o) not specified for constant 10 in module/design-unit pipe_tb.
+#20 A=10; B=10; C=5; D=3;
+|
+halcheck: *W,SEPLIN (./pipe_tb.v,15|0): Use a separate line for each HDL statement.
+#20 A=10; B=10; C=5; D=3;
+|
+halcheck: *W,IMPDTC (./pipe_tb.v,15|0): Expression '5' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit pipe_tb.
+#20 A=10; B=10; C=5; D=3;
+|
+halcheck: *W,CONSBS (./pipe_tb.v,15|0): Base ('d, 'b, 'h, 'o) not specified for constant 5 in module/design-unit pipe_tb.
+#20 A=10; B=10; C=5; D=3;
+|
+halcheck: *W,IMPDTC (./pipe_tb.v,15|0): Expression '3' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit pipe_tb.
+#20 A=10; B=10; C=5; D=3;
+|
+halcheck: *W,CONSBS (./pipe_tb.v,15|0): Base ('d, 'b, 'h, 'o) not specified for constant 3 in module/design-unit pipe_tb.
+#20 A=20; B=11; C=1; D=4;
+|
+halcheck: *W,IMPDTC (./pipe_tb.v,16|0): Expression '20' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit pipe_tb.
+#20 A=20; B=11; C=1; D=4;
+|
+halcheck: *W,TRUNCZ (./pipe_tb.v,16|0): Truncation in constant conversion without a loss of bits in module/design-unit pipe_tb.
+#20 A=20; B=11; C=1; D=4;
+|
+halcheck: *W,CONSBS (./pipe_tb.v,16|0): Base ('d, 'b, 'h, 'o) not specified for constant 20 in module/design-unit pipe_tb.
+#20 A=20; B=11; C=1; D=4;
+|
+halcheck: *W,SEPLIN (./pipe_tb.v,16|0): Use a separate line for each HDL statement.
+#20 A=20; B=11; C=1; D=4;
+|
+halcheck: *W,IMPDTC (./pipe_tb.v,16|0): Expression '11' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit pipe_tb.
+#20 A=20; B=11; C=1; D=4;
+|
+halcheck: *W,CONSBS (./pipe_tb.v,16|0): Base ('d, 'b, 'h, 'o) not specified for constant 11 in module/design-unit pipe_tb.
+#20 A=20; B=11; C=1; D=4;
+|
+halcheck: *W,IMPDTC (./pipe_tb.v,16|0): Expression '1' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit pipe_tb.
+#20 A=20; B=11; C=1; D=4;
+|
+halcheck: *W,IMPDTC (./pipe_tb.v,16|0): Expression '4' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit pipe_tb.
+#20 A=20; B=11; C=1; D=4;
+|
+halcheck: *W,CONSBS (./pipe_tb.v,16|0): Base ('d, 'b, 'h, 'o) not specified for constant 4 in module/design-unit pipe_tb.
+#20 A=15; B=10; C=8; D=2;
+|
+halcheck: *W,IMPDTC (./pipe_tb.v,17|0): Expression '15' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit pipe_tb.
+#20 A=15; B=10; C=8; D=2;
+|
+halcheck: *W,TRUNCZ (./pipe_tb.v,17|0): Truncation in constant conversion without a loss of bits in module/design-unit pipe_tb.
+#20 A=15; B=10; C=8; D=2;
+|
+halcheck: *W,CONSBS (./pipe_tb.v,17|0): Base ('d, 'b, 'h, 'o) not specified for constant 15 in module/design-unit pipe_tb.
+#20 A=15; B=10; C=8; D=2;
+|
+halcheck: *W,SEPLIN (./pipe_tb.v,17|0): Use a separate line for each HDL statement.
+#20 A=15; B=10; C=8; D=2;
+|
+halcheck: *W,IMPDTC (./pipe_tb.v,17|0): Expression '10' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit pipe_tb.
+#20 A=15; B=10; C=8; D=2;
+|
+halcheck: *W,CONSBS (./pipe_tb.v,17|0): Base ('d, 'b, 'h, 'o) not specified for constant 10 in module/design-unit pipe_tb.
+#20 A=15; B=10; C=8; D=2;
+|
+halcheck: *W,IMPDTC (./pipe_tb.v,17|0): Expression '8' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit pipe_tb.
+#20 A=15; B=10; C=8; D=2;
+|
+halcheck: *W,CONSBS (./pipe_tb.v,17|0): Base ('d, 'b, 'h, 'o) not specified for constant 8 in module/design-unit pipe_tb.
+#20 A=15; B=10; C=8; D=2;
+|
+halcheck: *W,IMPDTC (./pipe_tb.v,17|0): Expression '2' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit pipe_tb.
+#20 A=15; B=10; C=8; D=2;
+|
+halcheck: *W,CONSBS (./pipe_tb.v,17|0): Base ('d, 'b, 'h, 'o) not specified for constant 2 in module/design-unit pipe_tb.
+begin
+|
+halcheck: *W,NOBLKN (./pipe_tb.v,21|0): Each block should be labeled with a meaningful name.
+$dumpfile ("pipe.vcd");
+|
+halcheck: *W,BADSYS (./pipe_tb.v,22|0): System task $dumpfile in module 'pipe_tb' is ignored.
+$dumpvars(0, pipe_tb);
+|
+halcheck: *W,BADSYS (./pipe_tb.v,23|0): System task $dumpvars in module 'pipe_tb' is ignored.
+$monitor ("Time:%d, F=%d",$time,F);
+|
+halcheck: *W,BADSYS (./pipe_tb.v,24|0): System task $monitor in module 'pipe_tb' is ignored.
+#300 $finish;
+|
+halcheck: *W,BADSYS (./pipe_tb.v,25|0): System task $finish in module 'pipe_tb' is ignored.
+module pipe_ex(F,A,B,C,D,clk);
+|
+halcheck: *W,DIFFMN (./pipe_tb.v,29|0): Module name 'pipe_ex' differs from file name 'pipe_tb.v'.
+module pipe_ex(F,A,B,C,D,clk);
+|
+halcheck: *W,MULTMF (./pipe_tb.v,29|0): More than one design-unit definition in file 'pipe_tb.v'.
+module pipe_ex(F,A,B,C,D,clk);
+|
+halcheck: *N,PRTCNT (./pipe_tb.v,29|0): Module/Entity 'pipe_ex' contains '6' ports.
+halcheck: (./pipe_tb.v,29): Number of Input ports: 5.
+halcheck: (./pipe_tb.v,29): Number of Output ports: 1.
+input [N-1:0] A,B,C,D;
+|
+halcheck: *N,DECLIN (./pipe_tb.v,31|0): Use a separate line for each HDL declaration.
+input [N-1:0] A,B,C,D;
+|
+halcheck: *W,LCVARN (./pipe_tb.v,31|0): Net name 'A' uses uppercase characters.
+input [N-1:0] A,B,C,D;
+|
+halcheck: *W,LCVARN (./pipe_tb.v,31|0): Net name 'B' uses uppercase characters.
+input [N-1:0] A,B,C,D;
+|
+halcheck: *W,LCVARN (./pipe_tb.v,31|0): Net name 'C' uses uppercase characters.
+input [N-1:0] A,B,C,D;
+|
+halcheck: *W,LCVARN (./pipe_tb.v,31|0): Net name 'D' uses uppercase characters.
+output [N-1:0] F;
+|
+halcheck: *W,LCVARN (./pipe_tb.v,33|0): Net name 'F' uses uppercase characters.
+reg [N-1:0] L12_x1,L12_x2,L12_D,L23_x3,L23_D,L34_F;
+|
+halcheck: *W,LCVARN (./pipe_tb.v,34|0): Register name 'L12_x1' uses uppercase characters.
+reg [N-1:0] L12_x1,L12_x2,L12_D,L23_x3,L23_D,L34_F;
+|
+halcheck: *W,NUMSUF (./pipe_tb.v,34|0): Identifier 'L12_x1' has a numeric value suffix.
+reg [N-1:0] L12_x1,L12_x2,L12_D,L23_x3,L23_D,L34_F;
+|
+halcheck: *W,LCVARN (./pipe_tb.v,34|0): Register name 'L12_x2' uses uppercase characters.
+reg [N-1:0] L12_x1,L12_x2,L12_D,L23_x3,L23_D,L34_F;
+|
+halcheck: *W,NUMSUF (./pipe_tb.v,34|0): Identifier 'L12_x2' has a numeric value suffix.
+reg [N-1:0] L12_x1,L12_x2,L12_D,L23_x3,L23_D,L34_F;
+|
+halcheck: *W,LCVARN (./pipe_tb.v,34|0): Register name 'L12_D' uses uppercase characters.
+reg [N-1:0] L12_x1,L12_x2,L12_D,L23_x3,L23_D,L34_F;
+|
+halcheck: *W,LCVARN (./pipe_tb.v,34|0): Register name 'L23_x3' uses uppercase characters.
+reg [N-1:0] L12_x1,L12_x2,L12_D,L23_x3,L23_D,L34_F;
+|
+halcheck: *W,NUMSUF (./pipe_tb.v,34|0): Identifier 'L23_x3' has a numeric value suffix.
+reg [N-1:0] L12_x1,L12_x2,L12_D,L23_x3,L23_D,L34_F;
+|
+halcheck: *W,LCVARN (./pipe_tb.v,34|0): Register name 'L23_D' uses uppercase characters.
+reg [N-1:0] L12_x1,L12_x2,L12_D,L23_x3,L23_D,L34_F;
+|
+halcheck: *W,LCVARN (./pipe_tb.v,34|0): Register name 'L34_F' uses uppercase characters.
+parameter N=10;
+|
+halcheck: *N,IDLENG (./pipe_tb.v,30|0): Identifier name 'N' is not of appropriate length (4 to 16 characters).
+parameter N=10;
+|
+halcheck: *W,PRMVAL (./pipe_tb.v,30|0): Bit width not specified for parameter 'N'.
+parameter N=10;
+|
+halcheck: *W,PRMBSE (./pipe_tb.v,30|0): Base not specified for parameter 'N'.
+begin
+|
+halcheck: *W,NOBLKN (./pipe_tb.v,37|0): Each block should be labeled with a meaningful name.
+L12_x1 <= #4 A+B;
+|
+halcheck: *W,DLNBLK (./pipe_tb.v,38|0): Delay in non-blocking assignment; delay will be ignored.
+L12_x1 <= #4 A+B;
+|
+halcheck: *W,POIASG (./pipe_tb.v,38|0): The result of addition operation may lead to a potential overflow in module/design-unit mypipe.
+halcheck: (./pipe_tb.v,38): LHS operand 'L12_x1' is 10 bit(s), RHS operand 'A + B' is 11 bit(s).
+halcheck: (./pipe_tb.v,38): Increase the size of LHS by 1 bit(s).
+L12_x1 <= #4 A+B;
+|
+halcheck: *W,LRGOPR (./pipe_tb.v,38|0): Arithmetic or relational operation performed on large operands in module/design-unit mypipe.
+L12_x2 <= #4 C-D;
+|
+halcheck: *W,DLNBLK (./pipe_tb.v,39|0): Delay in non-blocking assignment; delay will be ignored.
+L12_x2 <= #4 C-D;
+|
+halcheck: *W,LRGOPR (./pipe_tb.v,39|0): Arithmetic or relational operation performed on large operands in module/design-unit mypipe.
+begin
+|
+halcheck: *W,NOBLKN (./pipe_tb.v,43|0): Each block should be labeled with a meaningful name.
+L23_x3 <= #4 L12_x1 + L12_x2;
+|
+halcheck: *W,DLNBLK (./pipe_tb.v,44|0): Delay in non-blocking assignment; delay will be ignored.
+L23_x3 <= #4 L12_x1 + L12_x2;
+|
+halcheck: *W,POIASG (./pipe_tb.v,44|0): The result of addition operation may lead to a potential overflow in module/design-unit mypipe.
+halcheck: (./pipe_tb.v,44): LHS operand 'L23_x3' is 10 bit(s), RHS operand 'L12_x1 + L12_x2' is 11 bit(s).
+halcheck: (./pipe_tb.v,44): Increase the size of LHS by 1 bit(s).
+L23_x3 <= #4 L12_x1 + L12_x2;
+|
+halcheck: *W,LRGOPR (./pipe_tb.v,44|0): Arithmetic or relational operation performed on large operands in module/design-unit mypipe.
+always@(posedge clk)  //**Stage3**
+|
+halcheck: *W,NBGEND (./pipe_tb.v,47|0): Missing begin/end statement in the 'always' block.
+L34_F<= #6 L23_x3 * L23_D;
+|
+halcheck: *W,DLNBLK (./pipe_tb.v,48|0): Delay in non-blocking assignment; delay will be ignored.
+L34_F<= #6 L23_x3 * L23_D;
+|
+halcheck: *W,POIASG (./pipe_tb.v,48|0): The result of multiplication operation may lead to a potential overflow in module/design-unit mypipe.
+halcheck: (./pipe_tb.v,48): LHS operand 'L34_F' is 10 bit(s), RHS operand 'L23_x3 * L23_D' is 20 bit(s).
+halcheck: (./pipe_tb.v,48): Increase the size of LHS by 10 bit(s).
+halcheck: Total errors   = 0.
+halcheck: Total warnings = 92.
+
+  ==========================================================================
+Performing synthesizability checks 
+
+cfe64: 15.20.051-s(15.20.s051): (c) Copyright 1995 - 2018 Cadence Design Systems, Inc.
+cfe64 Build : Mon May  7 17:15:12 IST 2018 ldvopt246
+halsynth: Loading design snapshot....
+halsynth: Traversing design hierarchy....
+L12_x1 <= #4 A+B;
+|
+halsynth: *W,IGNDLY (./pipe_tb.v,38|0): Lumped delay in module 'pipe_ex' is ignored.
+L12_x2 <= #4 C-D;
+|
+halsynth: *W,IGNDLY (./pipe_tb.v,39|0): Lumped delay in module 'pipe_ex' is ignored.
+L23_x3 <= #4 L12_x1 + L12_x2;
+|
+halsynth: *W,IGNDLY (./pipe_tb.v,44|0): Lumped delay in module 'pipe_ex' is ignored.
+L34_F<= #6 L23_x3 * L23_D;
+|
+halsynth: *W,IGNDLY (./pipe_tb.v,48|0): Lumped delay in module 'pipe_ex' is ignored.
+initial clk=0;
+|
+halsynth: *W,INIUSP (./pipe_tb.v,9|0): Module pipe_tb has an initial block or a variable declaration assignment, which is ignored by synthesis tools.
+always #10 clk=~clk;
+|
+halsynth: *E,AWNDEL (./pipe_tb.v,10|0): Always block with no event trigger at the start in module pipe_tb.
+initial 
+|
+halsynth: *W,INIUSP (./pipe_tb.v,12|0): Module pipe_tb has an initial block or a variable declaration assignment, which is ignored by synthesis tools.
+initial
+|
+halsynth: *W,INIUSP (./pipe_tb.v,20|0): Module pipe_tb has an initial block or a variable declaration assignment, which is ignored by synthesis tools.
+halsynth: *W,COMBLP: In module pipe_tb, combinational loop detected for node clk.
+always #10 clk=~clk;
+|
+halsynth: (./pipe_tb.v,10|0): Source HDL information for the error/warning mentioned above.
+always #10 clk=~clk;
+|
+halsynth: *W,IGNDLY (./pipe_tb.v,10|0): Lumped delay in module 'pipe_tb' is ignored.
+halsynth: Total errors   = 1.
+halsynth: Total warnings = 9.
+
+  ==========================================================================
+Performing structural checks 
+
+halstruct(64): 15.20-s051: (c) Copyright 1995-2018 Cadence Design Systems, Inc.
+visadev(64): 15.20-s051: (c) Copyright 1995-2018 Cadence Design Systems, Inc.
+reg clk;
+|
+halstruct: *E,CMBPAU (./pipe_tb.v,6|0): Combinational loop detected through 'clk' in module/design-unit 'pipe_tb'.
+halstruct: (./pipe_tb.v,10): pipe_tb.clk.
+pipe_ex mypipe (F,A,B,C,D,clk);
+|
+halstruct: *W,UNCONO (./pipe_tb.v,8|0): Port 'F' (which is being used as an output) of entity/module 'pipe_ex' is being driven inside the design, but not connected (either partially or completely) in its instance 'pipe_tb.mypipe'.
+pipe_ex mypipe (F,A,B,C,D,clk);
+|
+halstruct: *E,UNCONI (./pipe_tb.v,8|0): Input port 'A' of entity/module 'pipe_ex' is being used inside architecture/module, but not connected (either partially or completely) in its instance 'pipe_tb.mypipe'.
+halstruct: (./pipe_tb.v,8): 'A[9:0]' mapped to actual expression 'A' which is undriven.
+pipe_ex mypipe (F,A,B,C,D,clk);
+|
+halstruct: *E,UNCONI (./pipe_tb.v,8|0): Input port 'B' of entity/module 'pipe_ex' is being used inside architecture/module, but not connected (either partially or completely) in its instance 'pipe_tb.mypipe'.
+halstruct: (./pipe_tb.v,8): 'B[9:0]' mapped to actual expression 'B' which is undriven.
+pipe_ex mypipe (F,A,B,C,D,clk);
+|
+halstruct: *E,UNCONI (./pipe_tb.v,8|0): Input port 'C' of entity/module 'pipe_ex' is being used inside architecture/module, but not connected (either partially or completely) in its instance 'pipe_tb.mypipe'.
+halstruct: (./pipe_tb.v,8): 'C[9:0]' mapped to actual expression 'C' which is undriven.
+pipe_ex mypipe (F,A,B,C,D,clk);
+|
+halstruct: *E,UNCONI (./pipe_tb.v,8|0): Input port 'D' of entity/module 'pipe_ex' is being used inside architecture/module, but not connected (either partially or completely) in its instance 'pipe_tb.mypipe'.
+halstruct: (./pipe_tb.v,8): 'D[9:0]' mapped to actual expression 'D' which is undriven.
+L12_x1 <= #4 A+B;
+|
+halstruct: *W,FFWNSR (./pipe_tb.v,38|0): Flip-flop 'L12_x1' does not have any set or reset.
+reg clk;
+|
+halstruct: *N,CLKINF (./pipe_tb.v,6|0): Signal 'pipe_tb.clk' was inferred as clock.
+halstruct: (./pipe_tb.v,6): Clock source is signal 'pipe_tb.clk'.
+halstruct: (./pipe_tb.v,38): Drives the flip-flop 'pipe_tb.mypipe.L12_x1'.
+L12_x1 <= #4 A+B;
+|
+halstruct: *W,CLKNPI (./pipe_tb.v,38|0): Flip-flop 'pipe_tb.mypipe.L12_x1' has clock 'clk' which is not derived from primary input.
+halstruct: (./pipe_tb.v,10): Derived from local variable 'clk'.
+L12_x1 <= #4 A+B;
+|
+halstruct: *W,NEGCLK (./pipe_tb.v,38|0): Clock signal 'pipe_tb.clk' of flip-flop 'pipe_tb.mypipe.L12_x1' is derived from an inverter.
+L12_x2 <= #4 C-D;
+|
+halstruct: *W,FFWNSR (./pipe_tb.v,39|0): Flip-flop 'L12_x2' does not have any set or reset.
+L12_x2 <= #4 C-D;
+|
+halstruct: *W,NEGCLK (./pipe_tb.v,39|0): Clock signal 'pipe_tb.clk' of flip-flop 'pipe_tb.mypipe.L12_x2' is derived from an inverter.
+L12_D  <= D;
+|
+halstruct: *W,FFWNSR (./pipe_tb.v,40|0): Flip-flop 'L12_D' does not have any set or reset.
+L12_D  <= D;
+|
+halstruct: *W,NEGCLK (./pipe_tb.v,40|0): Clock signal 'pipe_tb.clk' of flip-flop 'pipe_tb.mypipe.L12_D' is derived from an inverter.
+L23_x3 <= #4 L12_x1 + L12_x2;
+|
+halstruct: *W,FFWNSR (./pipe_tb.v,44|0): Flip-flop 'L23_x3' does not have any set or reset.
+L23_x3 <= #4 L12_x1 + L12_x2;
+|
+halstruct: *W,NEGCLK (./pipe_tb.v,44|0): Clock signal 'pipe_tb.clk' of flip-flop 'pipe_tb.mypipe.L23_x3' is derived from an inverter.
+L23_D <= L12_D;
+|
+halstruct: *W,FFWNSR (./pipe_tb.v,45|0): Flip-flop 'L23_D' does not have any set or reset.
+L23_D <= L12_D;
+|
+halstruct: *W,NEGCLK (./pipe_tb.v,45|0): Clock signal 'pipe_tb.clk' of flip-flop 'pipe_tb.mypipe.L23_D' is derived from an inverter.
+L34_F<= #6 L23_x3 * L23_D;
+|
+halstruct: *W,FFWNSR (./pipe_tb.v,48|0): Flip-flop 'L34_F' does not have any set or reset.
+L34_F<= #6 L23_x3 * L23_D;
+|
+halstruct: *W,NEGCLK (./pipe_tb.v,48|0): Clock signal 'pipe_tb.clk' of flip-flop 'pipe_tb.mypipe.L34_F' is derived from an inverter.
+module pipe_tb;
+|
+halstruct: *W,ATLGLC (./pipe_tb.v,1|0): Glue logic inferred in top-level module/design-unit 'pipe_tb'.
+halstruct: (./pipe_tb.v,10): HDL-statement inferred as glue logic.
+module pipe_tb;
+|
+halstruct: *N,NUMDFF (./pipe_tb.v,1|0): Number of single-bit D flip-flops present in the hierarchy is 60.
+halstruct: Design facts generated in 'hal.design_facts'.
+halstruct: Total errors   = 5.
+halstruct: Total warnings = 15.
+
+  ==========================================================================
+
+Analysis summary :
+
+ Errors   : (6)
+  AWNDEL (1)      CMBPAU (1)      UNCONI (4)     
+
+ Warnings : (116)
+  ATLGLC (1)      BADSYS (4)      CBYNAM (1)      CLKNPI (1)     
+  COMBLP (1)      CONSBS (14)     DIFFMN (1)      DLNBLK (4)     
+  EVTRIG (1)      FFWNSR (6)      IGNDLY (5)      IMPDTC (16)    
+  INIUSP (3)      INTTOB (1)      LCVARN (16)     LRGOPR (3)     
+  MULTMF (1)      NBGEND (2)      NEEDIO (1)      NEGCLK (6)     
+  NOBLKN (4)      NUMSUF (3)      POIASG (3)      PRMBSE (2)     
+  PRMVAL (2)      RDBFAS (1)      REVROP (1)      SEPLIN (6)     
+  TRUNCZ (5)      UNCONO (1)     
+
+ Notes    : (6)
+  CLKINF (1)      DECLIN (1)      IDLENG (2)      NUMDFF (1)     
+  PRTCNT (1)     
+
+Analysis complete.
+
+ ==========================================================================
+
+To analyze results, run following command :
+    ncbrowse -64bit -cdslib /home/adld27/sam/Pipelining/cds.lib -sortby severity -sortby category -sortby tag hal.log
+

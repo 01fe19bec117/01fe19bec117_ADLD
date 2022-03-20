@@ -1,0 +1,20 @@
+ncsim(64): 15.20-s051: (c) Copyright 1995-2018 Cadence Design Systems, Inc.
+
+-------------------------------------
+Relinquished control to SimVision...
+ncsim> 
+ncsim> ...Regained control from SimVision
+-------------------------------------
+
+ncsim> ncsim: Memory Usage - 38.6M program + 173.2M data = 211.8M total (212.8M Peak)
+ncsim: CPU Usage - 23.5s system + 17.0s user = 40.4s total (839.8s, 4.8% cpu)
+               56, F=  75
+Time:                  76, F=  66
+Time:                  96, F= 112
+Time:                 116, F=  62
+Simulation complete via $finish(1) at time 300 NS + 0
+./pipe_tb.v:25 #300 $finish;
+ncsim> ^C
+ncsim> exit
+ncsim: Memory Usage - 38.6M program + 179.0M data = 217.7M total (222.4M Peak)
+ncsim: CPU Usage - 24.6s system + 17.1s user = 41.6s total (832.4s, 5.0% cpu)
