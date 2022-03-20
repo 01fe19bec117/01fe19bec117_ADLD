@@ -1,0 +1,35 @@
+irun(64): 15.20-s051: (c) Copyright 1995-2018 Cadence Design Systems, Inc.
+TOOL:	irun(64)	15.20-s051: Started on Mar 19, 2022 at 10:02:35 IST
+irun
+	-access +rwc
+	moore_melay_tb.v
+file: moore_melay_tb.v
+	module worklib.moore_melay_tb:v
+		errors: 0, warnings: 0
+	module worklib.more_melay:v
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		moore_melay_tb
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.moore_melay_tb:v <0x188e9b59>
+			streams:   5, words:  3130
+		worklib.more_melay:v <0x3fc0614c>
+			streams:   3, words:  1493
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		             Instances  Unique
+		Modules:             2       2
+		Registers:           6       6
+		Scalar wires:        4       -
+		Always blocks:       2       2
+		Initial blocks:      2       2
+		Pseudo assignments:  3       3
+	Writing initial simulation snapshot: worklib.moore_melay_tb:v
+Loading snapshot worklib.moore_melay_tb:v .................... Done
+ncsim> source /cad_area/install/INCISIVE152/tools/inca/files/ncsimrc
+ncsim> run
+TOOL:	irun(64)	15.20-s051: Exiting on Mar 19, 2022 at 10:02:49 IST  (total: 00:00:14)
