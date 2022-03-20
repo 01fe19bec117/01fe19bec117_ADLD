@@ -1,0 +1,103 @@
+irun(64): 15.20-s051: (c) Copyright 1995-2018 Cadence Design Systems, Inc.
+TOOL:	irun(64)	15.20-s051: Started on Mar 14, 2022 at 11:58:01 IST
+irun
+	-access +rwc
+	ramtb.v
+Recompiling... reason: file './ramtb.v' is newer than expected.
+	expected: Mon Mar 14 12:06:06 2022
+	actual:   Mon Mar 14 12:07:05 2022
+file: ramtb.v
+	module worklib.ramtb:v
+		errors: 0, warnings: 0
+	module worklib.ram_3:v
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		ramtb
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.ram_3:v <0x57151ace>
+			streams:   2, words:   606
+		worklib.ramtb:v <0x78195ed0>
+			streams:   5, words:  4715
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		             Instances  Unique
+		Modules:             2       2
+		Registers:           8       8
+		Scalar wires:        2       -
+		Vectored wires:      3       -
+		Always blocks:       1       1
+		Initial blocks:      1       1
+		Cont. assignments:   1       1
+		Pseudo assignments:  4       4
+	Writing initial simulation snapshot: worklib.ramtb:v
+Loading snapshot worklib.ramtb:v .................... Done
+ncsim> source /cad_area/install/INCISIVE152/tools/inca/files/ncsimrc
+ncsim> run
+Address1:    0,Data1:   0
+Address1:    1,Data1:   2
+Address1:    2,Data1:   4
+Address1:    3,Data1:   6
+Address1:    4,Data1:   8
+Address1:    5,Data1:  10
+Address1:    6,Data1:  12
+Address1:    7,Data1:  14
+Address1:    8,Data1:  16
+Address1:    9,Data1:  18
+Address1:   10,Data1:  20
+Address1:   11,Data1:  22
+Address1:   12,Data1:  24
+Address1:   13,Data1:  26
+Address1:   14,Data1:  28
+Address1:   15,Data1:  30
+Address1:   16,Data1:  32
+Address1:   17,Data1:  34
+Address1:   18,Data1:  36
+Address1:   19,Data1:  38
+Address1:   20,Data1:  40
+Address1:   21,Data1:  42
+Address1:   22,Data1:  44
+Address1:   23,Data1:  46
+Address1:   24,Data1:  48
+Address1:   25,Data1:  50
+Address1:   26,Data1:  52
+Address1:   27,Data1:  54
+Address1:   28,Data1:  56
+Address1:   29,Data1:  58
+Address1:   30,Data1:  60
+Address1:   31,Data1:  62
+Address1:   32,Data1:  64
+Address1:   33,Data1:  66
+Address1:   34,Data1:  68
+Address1:   35,Data1:  70
+Address1:   36,Data1:  72
+Address1:   37,Data1:  74
+Address1:   38,Data1:  76
+Address1:   39,Data1:  78
+Address1:   40,Data1:  80
+Address1:   41,Data1:  82
+Address1:   42,Data1:  84
+Address1:   43,Data1:  86
+Address1:   44,Data1:  88
+Address1:   45,Data1:  90
+Address1:   46,Data1:  92
+Address1:   47,Data1:  94
+Address1:   48,Data1:  96
+Address1:   49,Data1:  98
+Address1:   50,Data1: 100
+Address2:    0,Data2: 100
+Address2:    0,Data2: 100
+Address2:    0,Data2: 100
+Address2:    0,Data2: 100
+Address2:    0,Data2: 100
+Address2:    0,Data2: 100
+Address2:    0,Data2: 100
+Address2:    0,Data2: 100
+Address2:    0,Data2: 100
+Address2:    0,Data2: 100
+ncsim: *W,RNQUIE: Simulation is complete.
+ncsim> exit
+TOOL:	irun(64)	15.20-s051: Exiting on Mar 14, 2022 at 11:58:02 IST  (total: 00:00:01)
