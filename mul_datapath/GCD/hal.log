@@ -1,0 +1,28 @@
+hal(64): 15.20-s051: (c) Copyright 1995-2018 Cadence Design Systems, Inc.
+hal: Options:   -cdslib /home/adld27/sam/GCD/cds.lib -logfile hal.log /home/adld27/sunidhi/parking_sys/parkingtb.v.
+hal: Workspace: /home/adld27/sam/GCD.
+hal: Date: Fri Mar 11 10:16:23 IST 2022.
+
+hal: Running on design source files.....
+
+  ==========================================================================
+Compiling design 
+
+
+endmodule
+        |
+ncvlog: *E,NOTSTT (/home/adld27/sunidhi/parking_sys/parkingtb.v,55|8): expecting a statement [9(IEEE)].
+irun: *E,VLGERR: An error occurred during parsing.  Review the log file for errors with the code *E and fix those identified problems to proceed.  Exiting with code (status 1).
+
+Analysis summary :
+
+ Errors   : (2)
+  NOTSTT (1)      VLGERR (1)     
+
+Analysis failed.
+
+ ==========================================================================
+
+To analyze results, run following command :
+    ncbrowse -64bit -cdslib /home/adld27/sam/GCD/cds.lib -sortby severity -sortby category -sortby tag hal.log
+

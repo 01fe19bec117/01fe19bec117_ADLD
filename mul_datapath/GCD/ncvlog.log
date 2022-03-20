@@ -1,0 +1,4 @@
+ncvlog(64): 15.20-s051: (c) Copyright 1995-2018 Cadence Design Systems, Inc.
+ncvlog: *F,DLIORG: Library (physical path) /home/adld27/sunidhi/parking_sys/INCA_libs/worklib was originally compiled with logical name 'worklib'. Please include the original definition of library in cds.lib file.
+ncvlog: Memory Usage - 21.3M program + 28.0M data = 49.3M total
+ncvlog: CPU Usage - 0.0s system + 0.0s user = 0.0s total (0.8s, 1.8% cpu)

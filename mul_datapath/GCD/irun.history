@@ -1,0 +1,6 @@
+s1(10Mar2022:18:48:22):  irun -access +rwc gcd_tb.v 
+s2(10Mar2022:19:12:50):  irun -access +rwc gcd_tb.v 
+s3(10Mar2022:19:13:55):  irun -access +rwc gcd_tb.v 
+s4(10Mar2022:19:18:21):  irun -access +rwc gcd_tb.v 
+s5(10Mar2022:19:19:32):  irun -access +rwc gcd_tb.v 
+s6(10Mar2022:19:20:05):  irun -access +rwc gcd_tb.v 

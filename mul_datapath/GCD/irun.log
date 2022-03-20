@@ -1,0 +1,50 @@
+irun(64): 15.20-s051: (c) Copyright 1995-2018 Cadence Design Systems, Inc.
+TOOL:	irun(64)	15.20-s051: Started on Mar 10, 2022 at 19:20:05 IST
+irun
+	-access +rwc
+	gcd_tb.v
+define worklib /home/adld25/GCD/INCA_libs/worklib
+|
+irun: *W,DLCPTH (./cds.lib,1): cds.lib Permission denied '/home/adld25/GCD/INCA_libs/worklib' (cds.lib command ignored).
+define worklib /home/adld25/GCD/INCA_libs/worklib
+|
+irun: *W,DLCPTH (./cds.lib,1): cds.lib Permission denied '/home/adld25/GCD/INCA_libs/worklib' (cds.lib command ignored).
+define worklib /home/adld25/GCD/INCA_libs/worklib
+|
+irun: *W,DLCPTH (./cds.lib,1): cds.lib Permission denied '/home/adld25/GCD/INCA_libs/worklib' (cds.lib command ignored).
+define worklib /home/adld25/GCD/INCA_libs/worklib
+|
+irun: *W,DLCPTH (./cds.lib,1): cds.lib Permission denied '/home/adld25/GCD/INCA_libs/worklib' (cds.lib command ignored).
+define worklib /home/adld25/GCD/INCA_libs/worklib
+|
+irun: *W,DLCPTH (./cds.lib,1): cds.lib Permission denied '/home/adld25/GCD/INCA_libs/worklib' (cds.lib command ignored).
+define worklib /home/adld25/GCD/INCA_libs/worklib
+|
+ncvlog: *W,DLCPTH (./cds.lib,1): cds.lib Permission denied '/home/adld25/GCD/INCA_libs/worklib' (cds.lib command ignored).
+file: gcd_tb.v
+	module worklib.PIPO:v
+		errors: 0, warnings: 0
+	module worklib.SUB:v
+		errors: 0, warnings: 0
+	Total errors/warnings found outside modules and primitives:
+		errors: 0, warnings: 1
+define worklib /home/adld25/GCD/INCA_libs/worklib
+|
+irun: *W,DLCPTH (./cds.lib,1): cds.lib Permission denied '/home/adld25/GCD/INCA_libs/worklib' (cds.lib command ignored).
+define worklib /home/adld25/GCD/INCA_libs/worklib
+|
+irun: *W,DLCPTH (./cds.lib,1): cds.lib Permission denied '/home/adld25/GCD/INCA_libs/worklib' (cds.lib command ignored).
+define worklib /home/adld25/GCD/INCA_libs/worklib
+|
+ncelab: *W,DLCPTH (./cds.lib,1): cds.lib Permission denied '/home/adld25/GCD/INCA_libs/worklib' (cds.lib command ignored).
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+		Caching library 'worklib' ....... Done
+gcd_GCD DP(ge,lt,eq,ldA,ldB,sel1,sel2,sel_in,data_in,clk);
+         |
+ncelab: *E,CUVMUR (./gcd_tb.v,6|9): instance 'gcd_tb.DP' of design unit 'gcd_GCD' is unresolved in 'worklib.gcd_tb:v'.
+controller CON(ldA,ldB,sel1,sel2,sel_in,done,clk,lt,gt,eq,start);
+             |
+ncelab: *E,CUVMUR (./gcd_tb.v,7|13): instance 'gcd_tb.CON' of design unit 'controller' is unresolved in 'worklib.gcd_tb:v'.
+irun: *E,ELBERR: Error during elaboration (status 1), exiting.
+TOOL:	irun(64)	15.20-s051: Exiting on Mar 10, 2022 at 19:20:08 IST  (total: 00:00:03)
