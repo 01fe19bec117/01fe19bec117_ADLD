@@ -1,0 +1,598 @@
+hal(64): 15.20-s051: (c) Copyright 1995-2018 Cadence Design Systems, Inc.
+hal: Options:   -cdslib /home/adld15/241/parking_system/cds.lib -logfile hal.log worklib.parking_system_tb:v.
+hal: Snapshot:  worklib.parking_system_tb:v.
+hal: Workspace: /home/adld15/241/parking_system.
+hal: Date: Mon Mar 14 11:00:06 IST 2022.
+
+hal: Running on elaborated SNAPSHOT.....
+
+  ==========================================================================
+Performing lint checks 
+
+halcheck(64): 15.20-s051: (c) Copyright 1995-2018 Cadence Design Systems, Inc.
+visadev(64): 15.20-s051: (c) Copyright 1995-2018 Cadence Design Systems, Inc.
+ parameter IDLE = 3'b000, WAIT_PASSWORD = 3'b001, WRONG_PASS = 3'b010, RIGHT_PASS = 3'b011,STOP = 3'b100;
+|
+halcheck: *W,MAXLEN (./parking_system_tb.v,64|0): The HDL source line is 105 characters, which exceeds the recommended length of 80 characters.
+module parking_system_tb;
+|
+halcheck: *N,IDLENG (./parking_system_tb.v,1|0): Identifier name 'parking_system_tb' is not of appropriate length (4 to 16 characters).
+module parking_system_tb;
+|
+halcheck: *W,NEEDIO (./parking_system_tb.v,1|0): Top-level module 'parking_system_tb' has no inputs/outputs/inouts.
+  wire GREEN_LED;
+|
+halcheck: *W,LCVARN (./parking_system_tb.v,12|0): Net name 'GREEN_LED' uses uppercase characters.
+  wire RED_LED;
+|
+halcheck: *W,LCVARN (./parking_system_tb.v,13|0): Net name 'RED_LED' uses uppercase characters.
+  wire [6:0] HEX_1;
+|
+halcheck: *W,LCVARN (./parking_system_tb.v,14|0): Net name 'HEX_1' uses uppercase characters.
+  wire [6:0] HEX_1;
+|
+halcheck: *W,NUMSUF (./parking_system_tb.v,14|0): Identifier 'HEX_1' has a numeric value suffix.
+  wire [6:0] HEX_1;
+|
+halcheck: *W,STYVAL (./parking_system_tb.v,14|0): Numeric value '6' used for identifier 'HEX_1'. Use constants to avoid portability issues.
+  wire [6:0] HEX_2;
+|
+halcheck: *W,LCVARN (./parking_system_tb.v,15|0): Net name 'HEX_2' uses uppercase characters.
+  wire [6:0] HEX_2;
+|
+halcheck: *W,NUMSUF (./parking_system_tb.v,15|0): Identifier 'HEX_2' has a numeric value suffix.
+  wire [6:0] HEX_2;
+|
+halcheck: *W,STYVAL (./parking_system_tb.v,15|0): Numeric value '6' used for identifier 'HEX_2'. Use constants to avoid portability issues.
+  reg [1:0] password_1;
+|
+halcheck: *W,NUMSUF (./parking_system_tb.v,8|0): Identifier 'password_1' has a numeric value suffix.
+  reg [1:0] password_1;
+|
+halcheck: *W,STYVAL (./parking_system_tb.v,8|0): Numeric value '1' used for identifier 'password_1'. Use constants to avoid portability issues.
+  reg [1:0] password_2;
+|
+halcheck: *W,NUMSUF (./parking_system_tb.v,9|0): Identifier 'password_2' has a numeric value suffix.
+  reg [1:0] password_2;
+|
+halcheck: *W,STYVAL (./parking_system_tb.v,9|0): Numeric value '1' used for identifier 'password_2'. Use constants to avoid portability issues.
+ initial begin
+|
+halcheck: *W,NOBLKN (./parking_system_tb.v,29|0): Each block should be labeled with a meaningful name.
+ clk = 0;
+|
+halcheck: *W,IMPDTC (./parking_system_tb.v,30|0): Expression '0' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit parking_system_tb.
+ clk = 0;
+|
+halcheck: *W,INTTOB (./parking_system_tb.v,30|0): Assigning a 0 or 1 (32 bits) to a single-bit variable in module/design-unit parking_system_tb.
+ clk = 0;
+|
+halcheck: *W,TRUNCZ (./parking_system_tb.v,30|0): Truncation in constant conversion without a loss of bits in module/design-unit parking_system_tb.
+ forever #10 clk = ~clk;
+|
+halcheck: *W,SEPLIN (./parking_system_tb.v,31|0): Use a separate line for each HDL statement.
+ initial begin
+|
+halcheck: *W,NOBLKN (./parking_system_tb.v,33|0): Each block should be labeled with a meaningful name.
+ reset_n = 0;
+|
+halcheck: *W,IMPDTC (./parking_system_tb.v,35|0): Expression '0' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit parking_system_tb.
+ reset_n = 0;
+|
+halcheck: *W,INTTOB (./parking_system_tb.v,35|0): Assigning a 0 or 1 (32 bits) to a single-bit variable in module/design-unit parking_system_tb.
+ reset_n = 0;
+|
+halcheck: *W,TRUNCZ (./parking_system_tb.v,35|0): Truncation in constant conversion without a loss of bits in module/design-unit parking_system_tb.
+ sensor_entrance = 0;
+|
+halcheck: *W,IMPDTC (./parking_system_tb.v,36|0): Expression '0' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit parking_system_tb.
+ sensor_entrance = 0;
+|
+halcheck: *W,INTTOB (./parking_system_tb.v,36|0): Assigning a 0 or 1 (32 bits) to a single-bit variable in module/design-unit parking_system_tb.
+ sensor_entrance = 0;
+|
+halcheck: *W,TRUNCZ (./parking_system_tb.v,36|0): Truncation in constant conversion without a loss of bits in module/design-unit parking_system_tb.
+ sensor_exit = 0;
+|
+halcheck: *W,IMPDTC (./parking_system_tb.v,37|0): Expression '0' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit parking_system_tb.
+ sensor_exit = 0;
+|
+halcheck: *W,INTTOB (./parking_system_tb.v,37|0): Assigning a 0 or 1 (32 bits) to a single-bit variable in module/design-unit parking_system_tb.
+ sensor_exit = 0;
+|
+halcheck: *W,TRUNCZ (./parking_system_tb.v,37|0): Truncation in constant conversion without a loss of bits in module/design-unit parking_system_tb.
+ password_1 = 0;
+|
+halcheck: *W,IMPDTC (./parking_system_tb.v,38|0): Expression '0' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit parking_system_tb.
+ password_1 = 0;
+|
+halcheck: *W,TRUNCZ (./parking_system_tb.v,38|0): Truncation in constant conversion without a loss of bits in module/design-unit parking_system_tb.
+ password_2 = 0;
+|
+halcheck: *W,IMPDTC (./parking_system_tb.v,39|0): Expression '0' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit parking_system_tb.
+ password_2 = 0;
+|
+halcheck: *W,TRUNCZ (./parking_system_tb.v,39|0): Truncation in constant conversion without a loss of bits in module/design-unit parking_system_tb.
+ #100;
+|
+halcheck: *W,EMPSTM (./parking_system_tb.v,41|0): Module 'parking_system_tb' contains an empty statement.
+      reset_n = 1;
+|
+halcheck: *W,IMPDTC (./parking_system_tb.v,42|0): Expression '1' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit parking_system_tb.
+      reset_n = 1;
+|
+halcheck: *W,INTTOB (./parking_system_tb.v,42|0): Assigning a 0 or 1 (32 bits) to a single-bit variable in module/design-unit parking_system_tb.
+      reset_n = 1;
+|
+halcheck: *W,TRUNCZ (./parking_system_tb.v,42|0): Truncation in constant conversion without a loss of bits in module/design-unit parking_system_tb.
+ #20;
+|
+halcheck: *W,EMPSTM (./parking_system_tb.v,43|0): Module 'parking_system_tb' contains an empty statement.
+ sensor_entrance = 1;
+|
+halcheck: *W,IMPDTC (./parking_system_tb.v,44|0): Expression '1' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit parking_system_tb.
+ sensor_entrance = 1;
+|
+halcheck: *W,INTTOB (./parking_system_tb.v,44|0): Assigning a 0 or 1 (32 bits) to a single-bit variable in module/design-unit parking_system_tb.
+ sensor_entrance = 1;
+|
+halcheck: *W,TRUNCZ (./parking_system_tb.v,44|0): Truncation in constant conversion without a loss of bits in module/design-unit parking_system_tb.
+ #1000;
+|
+halcheck: *W,EMPSTM (./parking_system_tb.v,45|0): Module 'parking_system_tb' contains an empty statement.
+ sensor_entrance = 0;
+|
+halcheck: *W,IMPDTC (./parking_system_tb.v,46|0): Expression '0' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit parking_system_tb.
+ sensor_entrance = 0;
+|
+halcheck: *W,INTTOB (./parking_system_tb.v,46|0): Assigning a 0 or 1 (32 bits) to a single-bit variable in module/design-unit parking_system_tb.
+ sensor_entrance = 0;
+|
+halcheck: *W,TRUNCZ (./parking_system_tb.v,46|0): Truncation in constant conversion without a loss of bits in module/design-unit parking_system_tb.
+ password_1 = 1;
+|
+halcheck: *W,IMPDTC (./parking_system_tb.v,47|0): Expression '1' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit parking_system_tb.
+ password_1 = 1;
+|
+halcheck: *W,TRUNCZ (./parking_system_tb.v,47|0): Truncation in constant conversion without a loss of bits in module/design-unit parking_system_tb.
+ password_2 = 2;
+|
+halcheck: *W,IMPDTC (./parking_system_tb.v,48|0): Expression '2' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit parking_system_tb.
+ password_2 = 2;
+|
+halcheck: *W,TRUNCZ (./parking_system_tb.v,48|0): Truncation in constant conversion without a loss of bits in module/design-unit parking_system_tb.
+ password_2 = 2;
+|
+halcheck: *W,CONSBS (./parking_system_tb.v,48|0): Base ('d, 'b, 'h, 'o) not specified for constant 2 in module/design-unit parking_system_tb.
+ #2000;
+|
+halcheck: *W,EMPSTM (./parking_system_tb.v,49|0): Module 'parking_system_tb' contains an empty statement.
+ sensor_exit =1;
+|
+halcheck: *W,IMPDTC (./parking_system_tb.v,50|0): Expression '1' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit parking_system_tb.
+ sensor_exit =1;
+|
+halcheck: *W,INTTOB (./parking_system_tb.v,50|0): Assigning a 0 or 1 (32 bits) to a single-bit variable in module/design-unit parking_system_tb.
+ sensor_exit =1;
+|
+halcheck: *W,TRUNCZ (./parking_system_tb.v,50|0): Truncation in constant conversion without a loss of bits in module/design-unit parking_system_tb.
+  parking_system uut (
+|
+halcheck: *N,IDLENG (./parking_system_tb.v,17|0): Identifier name 'uut' is not of appropriate length (4 to 16 characters).
+module parking_system( 
+|
+halcheck: *W,DIFFMN (./parking_system_tb.v,57|0): Module name 'parking_system' differs from file name 'parking_system_tb.v'.
+module parking_system( 
+|
+halcheck: *W,MULTMF (./parking_system_tb.v,57|0): More than one design-unit definition in file 'parking_system_tb.v'.
+module parking_system( 
+|
+halcheck: *N,PRTCNT (./parking_system_tb.v,57|0): Module/Entity 'parking_system' contains '10' ports.
+halcheck: (./parking_system_tb.v,57): Number of Input ports: 6.
+halcheck: (./parking_system_tb.v,57): Number of Output ports: 4.
+                input clk,reset_n,
+|
+halcheck: *N,DECLIN (./parking_system_tb.v,58|0): Use a separate line for each HDL declaration.
+ input sensor_entrance, sensor_exit, 
+|
+halcheck: *N,DECLIN (./parking_system_tb.v,59|0): Use a separate line for each HDL declaration.
+ input [1:0] password_1, password_2,
+|
+halcheck: *W,NUMSUF (./parking_system_tb.v,60|0): Identifier 'password_1' has a numeric value suffix.
+ input [1:0] password_1, password_2,
+|
+halcheck: *W,STYVAL (./parking_system_tb.v,60|0): Numeric value '1' used for identifier 'password_1'. Use constants to avoid portability issues.
+ input [1:0] password_1, password_2,
+|
+halcheck: *W,NUMSUF (./parking_system_tb.v,60|0): Identifier 'password_2' has a numeric value suffix.
+ input [1:0] password_1, password_2,
+|
+halcheck: *N,DECLIN (./parking_system_tb.v,60|0): Use a separate line for each HDL declaration.
+ output wire GREEN_LED,RED_LED,
+|
+halcheck: *N,DECLIN (./parking_system_tb.v,61|0): Use a separate line for each HDL declaration.
+ output reg [6:0] HEX_1, HEX_2
+|
+halcheck: *W,NUMSUF (./parking_system_tb.v,62|0): Identifier 'HEX_1' has a numeric value suffix.
+ output reg [6:0] HEX_1, HEX_2
+|
+halcheck: *W,STYVAL (./parking_system_tb.v,62|0): Numeric value '6' used for identifier 'HEX_1'. Use constants to avoid portability issues.
+ output reg [6:0] HEX_1, HEX_2
+|
+halcheck: *W,NUMSUF (./parking_system_tb.v,62|0): Identifier 'HEX_2' has a numeric value suffix.
+ output reg [6:0] HEX_1, HEX_2
+|
+halcheck: *N,DECLIN (./parking_system_tb.v,62|0): Use a separate line for each HDL declaration.
+ output wire GREEN_LED,RED_LED,
+|
+halcheck: *W,LCVARN (./parking_system_tb.v,61|0): Net name 'GREEN_LED' uses uppercase characters.
+ output wire GREEN_LED,RED_LED,
+|
+halcheck: *W,LCVARN (./parking_system_tb.v,61|0): Net name 'RED_LED' uses uppercase characters.
+ output reg [6:0] HEX_1, HEX_2
+|
+halcheck: *W,LCVARN (./parking_system_tb.v,62|0): Register name 'HEX_1' uses uppercase characters.
+ output reg [6:0] HEX_1, HEX_2
+|
+halcheck: *W,LCVARN (./parking_system_tb.v,62|0): Register name 'HEX_2' uses uppercase characters.
+ reg[2:0] current_state, next_state;
+|
+halcheck: *W,STYVAL (./parking_system_tb.v,66|0): Numeric value '2' used for identifier 'current_state'. Use constants to avoid portability issues.
+ reg[31:0] counter_wait;
+|
+halcheck: *W,STYVAL (./parking_system_tb.v,67|0): Numeric value '31' used for identifier 'counter_wait'. Use constants to avoid portability issues.
+ begin
+|
+halcheck: *W,NOBLKN (./parking_system_tb.v,71|0): Each block should be labeled with a meaningful name.
+ if(~reset_n) 
+|
+halcheck: *W,NBGEND (./parking_system_tb.v,72|0): Missing begin/end statement in the 'if' block.
+ if(~reset_n) 
+|
+halcheck: *W,LOGNEG (./parking_system_tb.v,72|0): Bit-wise negation in a conditional expression. Logical NOT may have been intended.
+ current_state = IDLE;
+|
+halcheck: *W,BLKSQB (./parking_system_tb.v,73|0): Blocking assignment encountered in a sequential block.
+ current_state = next_state;
+|
+halcheck: *W,BLKSQB (./parking_system_tb.v,75|0): Blocking assignment encountered in a sequential block.
+ current_state = next_state;
+|
+halcheck: *W,REVROP (./parking_system_tb.v,75|0): Register 'next_state' is being read/assigned outside the process in which it was assigned using a blocking assignment.
+halcheck: (./parking_system_tb.v,89): Assigned using blocking assignment in this process.
+ begin
+|
+halcheck: *W,NOBLKN (./parking_system_tb.v,79|0): Each block should be labeled with a meaningful name.
+ if(~reset_n) 
+|
+halcheck: *W,NBGEND (./parking_system_tb.v,80|0): Missing begin/end statement in the 'if' block.
+ if(~reset_n) 
+|
+halcheck: *W,LOGNEG (./parking_system_tb.v,80|0): Bit-wise negation in a conditional expression. Logical NOT may have been intended.
+ counter_wait <= 0;
+|
+halcheck: *W,IMPDTC (./parking_system_tb.v,81|0): Expression '0' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit uut.
+ else if(current_state==WAIT_PASSWORD)
+|
+halcheck: *W,NBGEND (./parking_system_tb.v,82|0): Missing begin/end statement in the 'if' block.
+ else if(current_state==WAIT_PASSWORD)
+|
+halcheck: *W,REVROP (./parking_system_tb.v,82|0): Register 'current_state' is being read/assigned outside the process in which it was assigned using a blocking assignment.
+halcheck: (./parking_system_tb.v,70): Assigned using blocking assignment in this process.
+ counter_wait <= counter_wait + 1;
+|
+halcheck: *W,IMPTYP (./parking_system_tb.v,83|0): Expression 'counter_wait + 1' implicitly converted to type 'register' from type 'integer'.
+ counter_wait <= counter_wait + 1;
+|
+halcheck: *W,LRGOPR (./parking_system_tb.v,83|0): Arithmetic or relational operation performed on large operands in module/design-unit uut.
+ counter_wait <= 0;
+|
+halcheck: *W,IMPDTC (./parking_system_tb.v,85|0): Expression '0' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit uut.
+ begin
+|
+halcheck: *W,NOBLKN (./parking_system_tb.v,90|0): Each block should be labeled with a meaningful name.
+ case(current_state)
+|
+halcheck: *W,REVROP (./parking_system_tb.v,91|0): Register 'current_state' is being read/assigned outside the process in which it was assigned using a blocking assignment.
+halcheck: (./parking_system_tb.v,70): Assigned using blocking assignment in this process.
+         if(sensor_entrance == 1)
+|
+halcheck: *W,NBGEND (./parking_system_tb.v,93|0): Missing begin/end statement in the 'if' block.
+         if(sensor_entrance == 1)
+|
+halcheck: *W,ULCMPE (./parking_system_tb.v,93|0): Unequal length operands in equality operator encountered (padding produces incorrect result) in module/design-unit uut. LHS operand is 1 bits, RHS operand is 32 bits.
+ if(counter_wait <= 3)
+|
+halcheck: *W,NBGEND (./parking_system_tb.v,99|0): Missing begin/end statement in the 'if' block.
+ if(counter_wait <= 3)
+|
+halcheck: *W,LRGOPR (./parking_system_tb.v,99|0): Arithmetic or relational operation performed on large operands in module/design-unit uut.
+ if((password_1==2'b01)&&(password_2==2'b10))
+|
+halcheck: *W,NBGEND (./parking_system_tb.v,103|0): Missing begin/end statement in the 'if' block.
+ if((password_1==2'b01)&&(password_2==2'b10))
+|
+halcheck: *W,NBGEND (./parking_system_tb.v,110|0): Missing begin/end statement in the 'if' block.
+ if(sensor_entrance==1 && sensor_exit == 1)
+|
+halcheck: *W,NBGEND (./parking_system_tb.v,116|0): Missing begin/end statement in the 'if' block.
+ if(sensor_entrance==1 && sensor_exit == 1)
+|
+halcheck: *W,ULCMPE (./parking_system_tb.v,116|0): Unequal length operands in equality operator encountered (padding produces incorrect result) in module/design-unit uut. LHS operand is 1 bits, RHS operand is 32 bits.
+ else if(sensor_exit == 1)
+|
+halcheck: *W,NBGEND (./parking_system_tb.v,118|0): Missing begin/end statement in the 'if' block.
+ else if(sensor_exit == 1)
+|
+halcheck: *W,ULCMPE (./parking_system_tb.v,118|0): Unequal length operands in equality operator encountered (padding produces incorrect result) in module/design-unit uut. LHS operand is 1 bits, RHS operand is 32 bits.
+ if((password_1==2'b01)&&(password_2==2'b10))
+|
+halcheck: *W,NBGEND (./parking_system_tb.v,124|0): Missing begin/end statement in the 'if' block.
+ always @(posedge clk) begin 
+|
+halcheck: *W,NOBLKN (./parking_system_tb.v,133|0): Each block should be labeled with a meaningful name.
+ case(current_state)
+|
+halcheck: *E,CDEFNC (./parking_system_tb.v,134|0): Case statement without a default clause.
+ case(current_state)
+|
+halcheck: *W,REVROP (./parking_system_tb.v,134|0): Register 'current_state' is being read/assigned outside the process in which it was assigned using a blocking assignment.
+halcheck: (./parking_system_tb.v,70): Assigned using blocking assignment in this process.
+ green_tmp = 1'b0;
+|
+halcheck: *W,BLKSQB (./parking_system_tb.v,136|0): Blocking assignment encountered in a sequential block.
+ red_tmp = 1'b0;
+|
+halcheck: *W,BLKSQB (./parking_system_tb.v,137|0): Blocking assignment encountered in a sequential block.
+ HEX_1 = 7'b1111111; // off
+|
+halcheck: *W,BLKSQB (./parking_system_tb.v,138|0): Blocking assignment encountered in a sequential block.
+ HEX_2 = 7'b1111111; // off
+|
+halcheck: *W,BLKSQB (./parking_system_tb.v,139|0): Blocking assignment encountered in a sequential block.
+ green_tmp = 1'b0;
+|
+halcheck: *W,BLKSQB (./parking_system_tb.v,142|0): Blocking assignment encountered in a sequential block.
+ red_tmp = 1'b1;
+|
+halcheck: *W,BLKSQB (./parking_system_tb.v,143|0): Blocking assignment encountered in a sequential block.
+ HEX_1 = 7'b000_0110; // E
+|
+halcheck: *W,BLKSQB (./parking_system_tb.v,144|0): Blocking assignment encountered in a sequential block.
+ HEX_2 = 7'b010_1011; // n 
+|
+halcheck: *W,BLKSQB (./parking_system_tb.v,145|0): Blocking assignment encountered in a sequential block.
+ green_tmp = 1'b0;
+|
+halcheck: *W,BLKSQB (./parking_system_tb.v,148|0): Blocking assignment encountered in a sequential block.
+ red_tmp = ~red_tmp;
+|
+halcheck: *W,BLKSQB (./parking_system_tb.v,149|0): Blocking assignment encountered in a sequential block.
+ red_tmp = ~red_tmp;
+|
+halcheck: *W,RDBFAS (./parking_system_tb.v,149|0): Register 'red_tmp', assigned using blocking assignment, is being read before getting assigned.
+ HEX_1 = 7'b000_0110; // E
+|
+halcheck: *W,BLKSQB (./parking_system_tb.v,150|0): Blocking assignment encountered in a sequential block.
+ HEX_2 = 7'b000_0110; // E 
+|
+halcheck: *W,BLKSQB (./parking_system_tb.v,151|0): Blocking assignment encountered in a sequential block.
+ green_tmp = ~green_tmp;
+|
+halcheck: *W,BLKSQB (./parking_system_tb.v,154|0): Blocking assignment encountered in a sequential block.
+ green_tmp = ~green_tmp;
+|
+halcheck: *W,RDBFAS (./parking_system_tb.v,154|0): Register 'green_tmp', assigned using blocking assignment, is being read before getting assigned.
+ red_tmp = 1'b0;
+|
+halcheck: *W,BLKSQB (./parking_system_tb.v,155|0): Blocking assignment encountered in a sequential block.
+ HEX_1 = 7'b000_0010; // 6
+|
+halcheck: *W,BLKSQB (./parking_system_tb.v,156|0): Blocking assignment encountered in a sequential block.
+ HEX_2 = 7'b100_0000; // 0 
+|
+halcheck: *W,BLKSQB (./parking_system_tb.v,157|0): Blocking assignment encountered in a sequential block.
+ green_tmp = 1'b0;
+|
+halcheck: *W,BLKSQB (./parking_system_tb.v,160|0): Blocking assignment encountered in a sequential block.
+ red_tmp = ~red_tmp;
+|
+halcheck: *W,BLKSQB (./parking_system_tb.v,161|0): Blocking assignment encountered in a sequential block.
+ red_tmp = ~red_tmp;
+|
+halcheck: *W,RDBFAS (./parking_system_tb.v,161|0): Register 'red_tmp', assigned using blocking assignment, is being read before getting assigned.
+ HEX_1 = 7'b001_0010; // 5
+|
+halcheck: *W,BLKSQB (./parking_system_tb.v,162|0): Blocking assignment encountered in a sequential block.
+ HEX_2 = 7'b000_1100; // P 
+|
+halcheck: *W,BLKSQB (./parking_system_tb.v,163|0): Blocking assignment encountered in a sequential block.
+ assign RED_LED = red_tmp  ;
+|
+halcheck: *W,REVROP (./parking_system_tb.v,167|0): Register 'red_tmp' is being read/assigned outside the process in which it was assigned using a blocking assignment.
+halcheck: (./parking_system_tb.v,133): Assigned using blocking assignment in this process.
+ assign GREEN_LED = green_tmp;
+|
+halcheck: *W,REVROP (./parking_system_tb.v,168|0): Register 'green_tmp' is being read/assigned outside the process in which it was assigned using a blocking assignment.
+halcheck: (./parking_system_tb.v,133): Assigned using blocking assignment in this process.
+  wire GREEN_LED;
+|
+halcheck: *W,URDWIR (./parking_system_tb.v,12|0): Wire 'GREEN_LED' defined in module 'parking_system_tb' does not drive any object, but is assigned at least once.
+  wire RED_LED;
+|
+halcheck: *W,URDWIR (./parking_system_tb.v,13|0): Wire 'RED_LED' defined in module 'parking_system_tb' does not drive any object, but is assigned at least once.
+  wire [6:0] HEX_1;
+|
+halcheck: *W,URDWIR (./parking_system_tb.v,14|0): Wire 'HEX_1' defined in module 'parking_system_tb' does not drive any object, but is assigned at least once.
+  wire [6:0] HEX_2;
+|
+halcheck: *W,URDWIR (./parking_system_tb.v,15|0): Wire 'HEX_2' defined in module 'parking_system_tb' does not drive any object, but is assigned at least once.
+halcheck: Total errors   = 1.
+halcheck: Total warnings = 127.
+
+  ==========================================================================
+Performing synthesizability checks 
+
+cfe64: 15.20.051-s(15.20.s051): (c) Copyright 1995 - 2018 Cadence Design Systems, Inc.
+cfe64 Build : Mon May  7 17:15:12 IST 2018 ldvopt246
+halsynth: Loading design snapshot....
+halsynth: Traversing design hierarchy....
+ current_state = next_state;
+|
+halsynth: *N,FSMIDN (./parking_system_tb.v,75|0): In module/design-unit 'parking_system', FSM for state register 'current_state' has been recognized.
+ always @(posedge clk or negedge reset_n)
+|
+halsynth: *W,BADFSM (./parking_system_tb.v,70|0): In module/design-unit 'parking_system', FSM for state register 'current_state' does not adhere to modeling style guidelines.
+ always @(posedge clk or negedge reset_n) 
+|
+halsynth: (./parking_system_tb.v,78|0): Source HDL information for the error/warning mentioned above.
+ always @(*)
+|
+halsynth: (./parking_system_tb.v,89|0): Source HDL information for the error/warning mentioned above.
+ always @(posedge clk) begin 
+|
+halsynth: (./parking_system_tb.v,133|0): Source HDL information for the error/warning mentioned above.
+ WAIT_PASSWORD: begin
+|
+halsynth: *W,TRNMBT (./parking_system_tb.v,98|0): For the specified state '1', the state value changes by more than one bits on transition to state(s): 2.
+ next_state = WRONG_PASS;
+|
+halsynth: (./parking_system_tb.v,106|0): Source HDL information for the error/warning mentioned above.
+ RIGHT_PASS: begin
+|
+halsynth: *W,TRNMBT (./parking_system_tb.v,115|0): For the specified state '3', the state value changes by more than one bits on transition to state(s): 4, 0.
+ next_state = STOP;
+|
+halsynth: (./parking_system_tb.v,117|0): Source HDL information for the error/warning mentioned above.
+ next_state = IDLE;
+|
+halsynth: (./parking_system_tb.v,119|0): Source HDL information for the error/warning mentioned above.
+ STOP: begin
+|
+halsynth: *W,TRNMBT (./parking_system_tb.v,123|0): For the specified state '4', the state value changes by more than one bits on transition to state(s): 3.
+ next_state = RIGHT_PASS;
+|
+halsynth: (./parking_system_tb.v,125|0): Source HDL information for the error/warning mentioned above.
+module parking_system( 
+|
+halsynth: *W,EXTFSM (./parking_system_tb.v,57|0): Extraneous logic present in module/design-unit 'parking_system' that encodes an FSM.
+ initial begin
+|
+halsynth: *W,INIUSP (./parking_system_tb.v,29|0): Module parking_system_tb has an initial block or a variable declaration assignment, which is ignored by synthesis tools.
+ initial begin
+|
+halsynth: *W,INIUSP (./parking_system_tb.v,33|0): Module parking_system_tb has an initial block or a variable declaration assignment, which is ignored by synthesis tools.
+halsynth: Total errors   = 0.
+halsynth: Total warnings = 7.
+
+  ==========================================================================
+Performing structural checks 
+
+halstruct(64): 15.20-s051: (c) Copyright 1995-2018 Cadence Design Systems, Inc.
+visadev(64): 15.20-s051: (c) Copyright 1995-2018 Cadence Design Systems, Inc.
+module parking_system( 
+|
+halstruct: *W,SYNASN (./parking_system_tb.v,57|0): The module/design-unit 'parking_system' contains synchronous as well as asynchronous logic.
+halstruct: (./parking_system_tb.v,129): One instance/occurence of asynchronous logic at 'parking_system_tb.uut.next_state'.
+halstruct: (./parking_system_tb.v,75): One instance/occurence of synchronous logic at 'parking_system_tb.uut.current_state'.
+  parking_system uut (
+|
+halstruct: *E,UNCONI (./parking_system_tb.v,17|0): Input port 'clk' of entity/module 'parking_system' is being used inside architecture/module, but not connected (either partially or completely) in its instance 'parking_system_tb.uut'.
+halstruct: (./parking_system_tb.v,17): 'clk' mapped to actual expression 'clk' which is undriven.
+  parking_system uut (
+|
+halstruct: *E,UNCONI (./parking_system_tb.v,17|0): Input port 'reset_n' of entity/module 'parking_system' is being used inside architecture/module, but not connected (either partially or completely) in its instance 'parking_system_tb.uut'.
+halstruct: (./parking_system_tb.v,17): 'reset_n' mapped to actual expression 'reset_n' which is undriven.
+  parking_system uut (
+|
+halstruct: *E,UNCONI (./parking_system_tb.v,17|0): Input port 'sensor_entrance' of entity/module 'parking_system' is being used inside architecture/module, but not connected (either partially or completely) in its instance 'parking_system_tb.uut'.
+halstruct: (./parking_system_tb.v,17): 'sensor_entrance' mapped to actual expression 'sensor_entrance' which is undriven.
+  parking_system uut (
+|
+halstruct: *E,UNCONI (./parking_system_tb.v,17|0): Input port 'sensor_exit' of entity/module 'parking_system' is being used inside architecture/module, but not connected (either partially or completely) in its instance 'parking_system_tb.uut'.
+halstruct: (./parking_system_tb.v,17): 'sensor_exit' mapped to actual expression 'sensor_exit' which is undriven.
+  parking_system uut (
+|
+halstruct: *E,UNCONI (./parking_system_tb.v,17|0): Input port 'password_1' of entity/module 'parking_system' is being used inside architecture/module, but not connected (either partially or completely) in its instance 'parking_system_tb.uut'.
+halstruct: (./parking_system_tb.v,17): 'password_1[1:0]' mapped to actual expression 'password_1' which is undriven.
+  parking_system uut (
+|
+halstruct: *E,UNCONI (./parking_system_tb.v,17|0): Input port 'password_2' of entity/module 'parking_system' is being used inside architecture/module, but not connected (either partially or completely) in its instance 'parking_system_tb.uut'.
+halstruct: (./parking_system_tb.v,17): 'password_2[1:0]' mapped to actual expression 'password_2' which is undriven.
+  parking_system uut (
+|
+halstruct: *W,UNCONO (./parking_system_tb.v,17|0): Port 'GREEN_LED' (which is being used as an output) of entity/module 'parking_system' is being driven inside the design, but not connected (either partially or completely) in its instance 'parking_system_tb.uut'.
+  parking_system uut (
+|
+halstruct: *W,UNCONO (./parking_system_tb.v,17|0): Port 'RED_LED' (which is being used as an output) of entity/module 'parking_system' is being driven inside the design, but not connected (either partially or completely) in its instance 'parking_system_tb.uut'.
+  parking_system uut (
+|
+halstruct: *W,UNCONO (./parking_system_tb.v,17|0): Port 'HEX_1' (which is being used as an output) of entity/module 'parking_system' is being driven inside the design, but not connected (either partially or completely) in its instance 'parking_system_tb.uut'.
+  parking_system uut (
+|
+halstruct: *W,UNCONO (./parking_system_tb.v,17|0): Port 'HEX_2' (which is being used as an output) of entity/module 'parking_system' is being driven inside the design, but not connected (either partially or completely) in its instance 'parking_system_tb.uut'.
+ current_state = next_state;
+|
+halstruct: *N,FFASRT (./parking_system_tb.v,75|0): Flip-flop 'current_state' has an asynchronous reset 'reset_n'.
+                input clk,reset_n,
+|
+halstruct: *N,CLKINF (./parking_system_tb.v,58|0): Signal 'parking_system_tb.uut.clk' was inferred as clock.
+halstruct: (./parking_system_tb.v,58): Clock source is signal 'parking_system_tb.uut.clk'.
+halstruct: (./parking_system_tb.v,75): Drives the flip-flop 'parking_system_tb.uut.current_state'.
+ current_state = next_state;
+|
+halstruct: *W,ACNCPI (./parking_system_tb.v,75|0): Asynchronous reset 'reset_n' of latch/flip-flop 'parking_system_tb.uut.current_state' is not controllable from primary inputs.
+ current_state = next_state;
+|
+halstruct: *W,CLKNPI (./parking_system_tb.v,75|0): Flip-flop 'parking_system_tb.uut.current_state' has clock 'clk' which is not derived from primary input.
+halstruct: (./parking_system_tb.v,4): Derived from local variable 'clk'.
+ counter_wait <= 0;
+|
+halstruct: *N,FFASRT (./parking_system_tb.v,85|0): Flip-flop 'counter_wait' has an asynchronous reset 'reset_n'.
+ green_tmp = 1'b0;
+|
+halstruct: *W,FFWNSR (./parking_system_tb.v,160|0): Flip-flop 'green_tmp' does not have any set or reset.
+ red_tmp = ~red_tmp;
+|
+halstruct: *W,FFWNSR (./parking_system_tb.v,161|0): Flip-flop 'red_tmp' does not have any set or reset.
+ HEX_1 = 7'b001_0010; // 5
+|
+halstruct: *W,FFWNSR (./parking_system_tb.v,162|0): Flip-flop 'HEX_1' does not have any set or reset.
+ HEX_2 = 7'b000_1100; // P 
+|
+halstruct: *W,FFWNSR (./parking_system_tb.v,163|0): Flip-flop 'HEX_2' does not have any set or reset.
+module parking_system_tb;
+|
+halstruct: *N,NUMDFF (./parking_system_tb.v,1|0): Number of single-bit D flip-flops present in the hierarchy is 51.
+halstruct: Design facts generated in 'hal.design_facts'.
+halstruct: Total errors   = 6.
+halstruct: Total warnings = 11.
+
+  ==========================================================================
+
+Analysis summary :
+
+ Errors   : (7)
+  CDEFNC (1)      UNCONI (6)     
+
+ Warnings : (145)
+  ACNCPI (1)      BADFSM (1)      BLKSQB (22)     CLKNPI (1)     
+  CONSBS (1)      DIFFMN (1)      EMPSTM (4)      EXTFSM (1)     
+  FFWNSR (4)      IMPDTC (14)     IMPTYP (1)      INIUSP (2)     
+  INTTOB (8)      LCVARN (8)      LOGNEG (2)      LRGOPR (2)     
+  MAXLEN (1)      MULTMF (1)      NBGEND (10)     NEEDIO (1)     
+  NOBLKN (6)      NUMSUF (8)      RDBFAS (3)      REVROP (6)     
+  SEPLIN (1)      STYVAL (8)      SYNASN (1)      TRNMBT (3)     
+  TRUNCZ (12)     ULCMPE (3)      UNCONO (4)      URDWIR (4)     
+
+ Notes    : (13)
+  CLKINF (1)      DECLIN (5)      FFASRT (2)      FSMIDN (1)     
+  IDLENG (2)      NUMDFF (1)      PRTCNT (1)     
+
+Analysis complete.
+
+ ==========================================================================
+
+To analyze results, run following command :
+    ncbrowse -64bit -cdslib /home/adld15/241/parking_system/cds.lib -sortby severity -sortby category -sortby tag hal.log
+
