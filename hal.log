@@ -1,0 +1,1121 @@
+hal(64): 15.20-s051: (c) Copyright 1995-2018 Cadence Design Systems, Inc.
+hal: Options:   -cdslib /home/adld27/sam/CarParking/cds.lib -logfile hal.log worklib.tb_parking_system:module.
+hal: Snapshot:  worklib.tb_parking_system:module.
+hal: Workspace: /home/adld27/sam/CarParking.
+hal: Date: Fri Mar 11 10:54:23 IST 2022.
+
+hal: Running on elaborated SNAPSHOT.....
+
+  ==========================================================================
+Performing lint checks 
+
+halcheck(64): 15.20-s051: (c) Copyright 1995-2018 Cadence Design Systems, Inc.
+visadev(64): 15.20-s051: (c) Copyright 1995-2018 Cadence Design Systems, Inc.
+`timescale 1ns / 1ps
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,1|0): HDL source line contains one or more control characters.
+`timescale 1ns / 1ps
+|
+halcheck: *N,CDNOTE (./carparking_tb.v,1|0): The compiler directive '`timescale' is used in the RTL.
+// fpga4student.com FPGA projects, Verilog projects, VHDL projects
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,2|0): HDL source line contains one or more control characters.
+// Verilog project: Verilog code for car parking system
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,3|0): HDL source line contains one or more control characters.
+module tb_parking_system;
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,4|0): HDL source line contains one or more control characters.
+
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,5|0): HDL source line contains one or more control characters.
+  // Inputs
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,6|0): HDL source line contains one or more control characters.
+  reg clk;
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,7|0): HDL source line contains one or more control characters.
+  reg reset_n;
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,8|0): HDL source line contains one or more control characters.
+  reg sensor_entrance;
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,9|0): HDL source line contains one or more control characters.
+  reg sensor_exit;
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,10|0): HDL source line contains one or more control characters.
+  reg [1:0] password_1;
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,11|0): HDL source line contains one or more control characters.
+  reg [1:0] password_2;
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,12|0): HDL source line contains one or more control characters.
+
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,13|0): HDL source line contains one or more control characters.
+  // Outputs
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,14|0): HDL source line contains one or more control characters.
+  wire GREEN_LED;
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,15|0): HDL source line contains one or more control characters.
+  wire RED_LED;
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,16|0): HDL source line contains one or more control characters.
+  wire [6:0] HEX_1;
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,17|0): HDL source line contains one or more control characters.
+  wire [6:0] HEX_2;
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,18|0): HDL source line contains one or more control characters.
+// fpga4student.com FPGA projects, Verilog projects, VHDL projects
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,19|0): HDL source line contains one or more control characters.
+  // Instantiate the Unit Under Test (UUT)
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,20|0): HDL source line contains one or more control characters.
+  parking_system uut (
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,21|0): HDL source line contains one or more control characters.
+  .clk(clk), 
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,22|0): HDL source line contains one or more control characters.
+  .reset_n(reset_n), 
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,23|0): HDL source line contains one or more control characters.
+  .sensor_entrance(sensor_entrance), 
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,24|0): HDL source line contains one or more control characters.
+  .sensor_exit(sensor_exit), 
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,25|0): HDL source line contains one or more control characters.
+  .password_1(password_1), 
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,26|0): HDL source line contains one or more control characters.
+  .password_2(password_2), 
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,27|0): HDL source line contains one or more control characters.
+  .GREEN_LED(GREEN_LED), 
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,28|0): HDL source line contains one or more control characters.
+  .RED_LED(RED_LED), 
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,29|0): HDL source line contains one or more control characters.
+  .HEX_1(HEX_1), 
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,30|0): HDL source line contains one or more control characters.
+ .HEX_2(HEX_2)
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,31|0): HDL source line contains one or more control characters.
+ );
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,32|0): HDL source line contains one or more control characters.
+ initial begin
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,33|0): HDL source line contains one or more control characters.
+ clk = 0;
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,34|0): HDL source line contains one or more control characters.
+ forever #10 clk = ~clk;
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,35|0): HDL source line contains one or more control characters.
+ end
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,36|0): HDL source line contains one or more control characters.
+ initial begin
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,37|0): HDL source line contains one or more control characters.
+ // Initialize Inputs
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,38|0): HDL source line contains one or more control characters.
+ reset_n = 0;
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,39|0): HDL source line contains one or more control characters.
+ sensor_entrance = 0;
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,40|0): HDL source line contains one or more control characters.
+ sensor_exit = 0;
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,41|0): HDL source line contains one or more control characters.
+ password_1 = 0;
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,42|0): HDL source line contains one or more control characters.
+ password_2 = 0;
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,43|0): HDL source line contains one or more control characters.
+ // Wait 100 ns for global reset to finish
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,44|0): HDL source line contains one or more control characters.
+ #100;
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,45|0): HDL source line contains one or more control characters.
+      reset_n = 1;
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,46|0): HDL source line contains one or more control characters.
+ #20;
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,47|0): HDL source line contains one or more control characters.
+ sensor_entrance = 1;
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,48|0): HDL source line contains one or more control characters.
+ #1000;
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,49|0): HDL source line contains one or more control characters.
+ sensor_entrance = 0;
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,50|0): HDL source line contains one or more control characters.
+ password_1 = 1;
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,51|0): HDL source line contains one or more control characters.
+ password_2 = 2;
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,52|0): HDL source line contains one or more control characters.
+ #2000;
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,53|0): HDL source line contains one or more control characters.
+ sensor_exit =1;
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,54|0): HDL source line contains one or more control characters.
+ 
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,55|0): HDL source line contains one or more control characters.
+ // Add stimulus here
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,56|0): HDL source line contains one or more control characters.
+// fpga4student.com FPGA projects, Verilog projects, VHDL projects
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,57|0): HDL source line contains one or more control characters.
+ end
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,58|0): HDL source line contains one or more control characters.
+      
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,59|0): HDL source line contains one or more control characters.
+module parking_system( 
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,62|0): HDL source line contains one or more control characters.
+                input clk,reset_n,
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,63|0): HDL source line contains one or more control characters.
+ input sensor_entrance, sensor_exit, 
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,64|0): HDL source line contains one or more control characters.
+ input [1:0] password_1, password_2,
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,65|0): HDL source line contains one or more control characters.
+ output wire GREEN_LED,RED_LED,
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,66|0): HDL source line contains one or more control characters.
+ output reg [6:0] HEX_1, HEX_2
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,67|0): HDL source line contains one or more control characters.
+    );
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,68|0): HDL source line contains one or more control characters.
+ parameter IDLE = 3'b000, WAIT_PASSWORD = 3'b001, WRONG_PASS = 3'b010, RIGHT_PASS = 3'b011,STOP = 3'b100;
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,69|0): HDL source line contains one or more control characters.
+ parameter IDLE = 3'b000, WAIT_PASSWORD = 3'b001, WRONG_PASS = 3'b010, RIGHT_PASS = 3'b011,STOP = 3'b100;
+|
+halcheck: *W,MAXLEN (./carparking_tb.v,69|0): The HDL source line is 106 characters, which exceeds the recommended length of 80 characters.
+ // Moore FSM : output just depends on the current state
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,70|0): HDL source line contains one or more control characters.
+ reg[2:0] current_state, next_state;
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,71|0): HDL source line contains one or more control characters.
+ reg[31:0] counter_wait;
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,72|0): HDL source line contains one or more control characters.
+ reg red_tmp,green_tmp;
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,73|0): HDL source line contains one or more control characters.
+ // Next state
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,74|0): HDL source line contains one or more control characters.
+ always @(posedge clk or negedge reset_n)
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,75|0): HDL source line contains one or more control characters.
+ begin
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,76|0): HDL source line contains one or more control characters.
+ if(~reset_n) 
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,77|0): HDL source line contains one or more control characters.
+ current_state = IDLE;
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,78|0): HDL source line contains one or more control characters.
+ else
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,79|0): HDL source line contains one or more control characters.
+ current_state = next_state;
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,80|0): HDL source line contains one or more control characters.
+ end
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,81|0): HDL source line contains one or more control characters.
+ // counter_wait
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,82|0): HDL source line contains one or more control characters.
+ always @(posedge clk or negedge reset_n) 
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,83|0): HDL source line contains one or more control characters.
+ begin
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,84|0): HDL source line contains one or more control characters.
+ if(~reset_n) 
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,85|0): HDL source line contains one or more control characters.
+ counter_wait <= 0;
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,86|0): HDL source line contains one or more control characters.
+ else if(current_state==WAIT_PASSWORD)
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,87|0): HDL source line contains one or more control characters.
+ counter_wait <= counter_wait + 1;
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,88|0): HDL source line contains one or more control characters.
+ else 
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,89|0): HDL source line contains one or more control characters.
+ counter_wait <= 0;
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,90|0): HDL source line contains one or more control characters.
+ end
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,91|0): HDL source line contains one or more control characters.
+ // change state
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,92|0): HDL source line contains one or more control characters.
+// fpga4student.com FPGA projects, Verilog projects, VHDL projects
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,93|0): HDL source line contains one or more control characters.
+ always @(*)
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,94|0): HDL source line contains one or more control characters.
+ begin
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,95|0): HDL source line contains one or more control characters.
+ case(current_state)
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,96|0): HDL source line contains one or more control characters.
+ IDLE: begin
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,97|0): HDL source line contains one or more control characters.
+         if(sensor_entrance == 1)
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,98|0): HDL source line contains one or more control characters.
+ next_state = WAIT_PASSWORD;
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,99|0): HDL source line contains one or more control characters.
+ else
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,100|0): HDL source line contains one or more control characters.
+ next_state = IDLE;
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,101|0): HDL source line contains one or more control characters.
+ end
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,102|0): HDL source line contains one or more control characters.
+ WAIT_PASSWORD: begin
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,103|0): HDL source line contains one or more control characters.
+ if(counter_wait <= 3)
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,104|0): HDL source line contains one or more control characters.
+ next_state = WAIT_PASSWORD;
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,105|0): HDL source line contains one or more control characters.
+ else 
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,106|0): HDL source line contains one or more control characters.
+ begin
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,107|0): HDL source line contains one or more control characters.
+ if((password_1==2'b01)&&(password_2==2'b10))
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,108|0): HDL source line contains one or more control characters.
+ next_state = RIGHT_PASS;
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,109|0): HDL source line contains one or more control characters.
+ else
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,110|0): HDL source line contains one or more control characters.
+ next_state = WRONG_PASS;
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,111|0): HDL source line contains one or more control characters.
+ end
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,112|0): HDL source line contains one or more control characters.
+ end
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,113|0): HDL source line contains one or more control characters.
+ WRONG_PASS: begin
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,114|0): HDL source line contains one or more control characters.
+ if((password_1==2'b01)&&(password_2==2'b10))
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,115|0): HDL source line contains one or more control characters.
+ next_state = RIGHT_PASS;
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,116|0): HDL source line contains one or more control characters.
+ else
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,117|0): HDL source line contains one or more control characters.
+ next_state = WRONG_PASS;
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,118|0): HDL source line contains one or more control characters.
+ end
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,119|0): HDL source line contains one or more control characters.
+ RIGHT_PASS: begin
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,120|0): HDL source line contains one or more control characters.
+ if(sensor_entrance==1 && sensor_exit == 1)
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,121|0): HDL source line contains one or more control characters.
+ next_state = STOP;
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,122|0): HDL source line contains one or more control characters.
+ else if(sensor_exit == 1)
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,123|0): HDL source line contains one or more control characters.
+ next_state = IDLE;
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,124|0): HDL source line contains one or more control characters.
+ else
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,125|0): HDL source line contains one or more control characters.
+ next_state = RIGHT_PASS;
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,126|0): HDL source line contains one or more control characters.
+ end
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,127|0): HDL source line contains one or more control characters.
+ STOP: begin
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,128|0): HDL source line contains one or more control characters.
+ if((password_1==2'b01)&&(password_2==2'b10))
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,129|0): HDL source line contains one or more control characters.
+ next_state = RIGHT_PASS;
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,130|0): HDL source line contains one or more control characters.
+ else
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,131|0): HDL source line contains one or more control characters.
+ next_state = STOP;
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,132|0): HDL source line contains one or more control characters.
+ end
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,133|0): HDL source line contains one or more control characters.
+ default: next_state = IDLE;
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,134|0): HDL source line contains one or more control characters.
+ endcase
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,135|0): HDL source line contains one or more control characters.
+ end
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,136|0): HDL source line contains one or more control characters.
+ // LEDs and output, change the period of blinking LEDs here
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,137|0): HDL source line contains one or more control characters.
+ always @(posedge clk) begin 
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,138|0): HDL source line contains one or more control characters.
+ case(current_state)
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,139|0): HDL source line contains one or more control characters.
+ IDLE: begin
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,140|0): HDL source line contains one or more control characters.
+ green_tmp = 1'b0;
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,141|0): HDL source line contains one or more control characters.
+ red_tmp = 1'b0;
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,142|0): HDL source line contains one or more control characters.
+ HEX_1 = 7'b1111111; // off
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,143|0): HDL source line contains one or more control characters.
+ HEX_2 = 7'b1111111; // off
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,144|0): HDL source line contains one or more control characters.
+ end
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,145|0): HDL source line contains one or more control characters.
+ WAIT_PASSWORD: begin
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,146|0): HDL source line contains one or more control characters.
+ green_tmp = 1'b0;
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,147|0): HDL source line contains one or more control characters.
+ red_tmp = 1'b1;
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,148|0): HDL source line contains one or more control characters.
+ HEX_1 = 7'b000_0110; // E
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,149|0): HDL source line contains one or more control characters.
+ HEX_2 = 7'b010_1011; // n 
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,150|0): HDL source line contains one or more control characters.
+ end
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,151|0): HDL source line contains one or more control characters.
+ WRONG_PASS: begin
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,152|0): HDL source line contains one or more control characters.
+ green_tmp = 1'b0;
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,153|0): HDL source line contains one or more control characters.
+ red_tmp = ~red_tmp;
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,154|0): HDL source line contains one or more control characters.
+ HEX_1 = 7'b000_0110; // E
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,155|0): HDL source line contains one or more control characters.
+ HEX_2 = 7'b000_0110; // E 
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,156|0): HDL source line contains one or more control characters.
+ end
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,157|0): HDL source line contains one or more control characters.
+ RIGHT_PASS: begin
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,158|0): HDL source line contains one or more control characters.
+ green_tmp = ~green_tmp;
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,159|0): HDL source line contains one or more control characters.
+ red_tmp = 1'b0;
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,160|0): HDL source line contains one or more control characters.
+ HEX_1 = 7'b000_0010; // 6
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,161|0): HDL source line contains one or more control characters.
+ HEX_2 = 7'b100_0000; // 0 
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,162|0): HDL source line contains one or more control characters.
+ end
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,163|0): HDL source line contains one or more control characters.
+ STOP: begin
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,164|0): HDL source line contains one or more control characters.
+ green_tmp = 1'b0;
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,165|0): HDL source line contains one or more control characters.
+ red_tmp = ~red_tmp;
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,166|0): HDL source line contains one or more control characters.
+ HEX_1 = 7'b001_0010; // 5
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,167|0): HDL source line contains one or more control characters.
+ HEX_2 = 7'b000_1100; // P 
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,168|0): HDL source line contains one or more control characters.
+ end
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,169|0): HDL source line contains one or more control characters.
+ endcase
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,170|0): HDL source line contains one or more control characters.
+ end
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,171|0): HDL source line contains one or more control characters.
+ assign RED_LED = red_tmp  ;
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,172|0): HDL source line contains one or more control characters.
+ assign GREEN_LED = green_tmp;
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,173|0): HDL source line contains one or more control characters.
+
+|
+halcheck: *W,CTLCHR (./carparking_tb.v,174|0): HDL source line contains one or more control characters.
+module tb_parking_system;
+|
+halcheck: *N,IDLENG (./carparking_tb.v,4|0): Identifier name 'tb_parking_system' is not of appropriate length (4 to 16 characters).
+module tb_parking_system;
+|
+halcheck: *W,DIFFMN (./carparking_tb.v,4|0): Module name 'tb_parking_system' differs from file name 'carparking_tb.v'.
+module tb_parking_system;
+|
+halcheck: *W,NEEDIO (./carparking_tb.v,4|0): Top-level module 'tb_parking_system' has no inputs/outputs/inouts.
+  wire GREEN_LED;
+|
+halcheck: *W,LCVARN (./carparking_tb.v,15|0): Net name 'GREEN_LED' uses uppercase characters.
+  wire RED_LED;
+|
+halcheck: *W,LCVARN (./carparking_tb.v,16|0): Net name 'RED_LED' uses uppercase characters.
+  wire [6:0] HEX_1;
+|
+halcheck: *W,LCVARN (./carparking_tb.v,17|0): Net name 'HEX_1' uses uppercase characters.
+  wire [6:0] HEX_1;
+|
+halcheck: *W,NUMSUF (./carparking_tb.v,17|0): Identifier 'HEX_1' has a numeric value suffix.
+  wire [6:0] HEX_1;
+|
+halcheck: *W,STYVAL (./carparking_tb.v,17|0): Numeric value '6' used for identifier 'HEX_1'. Use constants to avoid portability issues.
+  wire [6:0] HEX_2;
+|
+halcheck: *W,LCVARN (./carparking_tb.v,18|0): Net name 'HEX_2' uses uppercase characters.
+  wire [6:0] HEX_2;
+|
+halcheck: *W,NUMSUF (./carparking_tb.v,18|0): Identifier 'HEX_2' has a numeric value suffix.
+  wire [6:0] HEX_2;
+|
+halcheck: *W,STYVAL (./carparking_tb.v,18|0): Numeric value '6' used for identifier 'HEX_2'. Use constants to avoid portability issues.
+  reg [1:0] password_1;
+|
+halcheck: *W,NUMSUF (./carparking_tb.v,11|0): Identifier 'password_1' has a numeric value suffix.
+  reg [1:0] password_1;
+|
+halcheck: *W,STYVAL (./carparking_tb.v,11|0): Numeric value '1' used for identifier 'password_1'. Use constants to avoid portability issues.
+  reg [1:0] password_2;
+|
+halcheck: *W,NUMSUF (./carparking_tb.v,12|0): Identifier 'password_2' has a numeric value suffix.
+  reg [1:0] password_2;
+|
+halcheck: *W,STYVAL (./carparking_tb.v,12|0): Numeric value '1' used for identifier 'password_2'. Use constants to avoid portability issues.
+ initial begin
+|
+halcheck: *W,NOBLKN (./carparking_tb.v,33|0): Each block should be labeled with a meaningful name.
+ clk = 0;
+|
+halcheck: *W,IMPDTC (./carparking_tb.v,34|0): Expression '0' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit tb_parking_system.
+ clk = 0;
+|
+halcheck: *W,INTTOB (./carparking_tb.v,34|0): Assigning a 0 or 1 (32 bits) to a single-bit variable in module/design-unit tb_parking_system.
+ clk = 0;
+|
+halcheck: *W,TRUNCZ (./carparking_tb.v,34|0): Truncation in constant conversion without a loss of bits in module/design-unit tb_parking_system.
+ forever #10 clk = ~clk;
+|
+halcheck: *W,SEPLIN (./carparking_tb.v,35|0): Use a separate line for each HDL statement.
+ initial begin
+|
+halcheck: *W,NOBLKN (./carparking_tb.v,37|0): Each block should be labeled with a meaningful name.
+ reset_n = 0;
+|
+halcheck: *W,IMPDTC (./carparking_tb.v,39|0): Expression '0' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit tb_parking_system.
+ reset_n = 0;
+|
+halcheck: *W,INTTOB (./carparking_tb.v,39|0): Assigning a 0 or 1 (32 bits) to a single-bit variable in module/design-unit tb_parking_system.
+ reset_n = 0;
+|
+halcheck: *W,TRUNCZ (./carparking_tb.v,39|0): Truncation in constant conversion without a loss of bits in module/design-unit tb_parking_system.
+ sensor_entrance = 0;
+|
+halcheck: *W,IMPDTC (./carparking_tb.v,40|0): Expression '0' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit tb_parking_system.
+ sensor_entrance = 0;
+|
+halcheck: *W,INTTOB (./carparking_tb.v,40|0): Assigning a 0 or 1 (32 bits) to a single-bit variable in module/design-unit tb_parking_system.
+ sensor_entrance = 0;
+|
+halcheck: *W,TRUNCZ (./carparking_tb.v,40|0): Truncation in constant conversion without a loss of bits in module/design-unit tb_parking_system.
+ sensor_exit = 0;
+|
+halcheck: *W,IMPDTC (./carparking_tb.v,41|0): Expression '0' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit tb_parking_system.
+ sensor_exit = 0;
+|
+halcheck: *W,INTTOB (./carparking_tb.v,41|0): Assigning a 0 or 1 (32 bits) to a single-bit variable in module/design-unit tb_parking_system.
+ sensor_exit = 0;
+|
+halcheck: *W,TRUNCZ (./carparking_tb.v,41|0): Truncation in constant conversion without a loss of bits in module/design-unit tb_parking_system.
+ password_1 = 0;
+|
+halcheck: *W,IMPDTC (./carparking_tb.v,42|0): Expression '0' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit tb_parking_system.
+ password_1 = 0;
+|
+halcheck: *W,TRUNCZ (./carparking_tb.v,42|0): Truncation in constant conversion without a loss of bits in module/design-unit tb_parking_system.
+ password_2 = 0;
+|
+halcheck: *W,IMPDTC (./carparking_tb.v,43|0): Expression '0' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit tb_parking_system.
+ password_2 = 0;
+|
+halcheck: *W,TRUNCZ (./carparking_tb.v,43|0): Truncation in constant conversion without a loss of bits in module/design-unit tb_parking_system.
+ #100;
+|
+halcheck: *W,EMPSTM (./carparking_tb.v,45|0): Module 'tb_parking_system' contains an empty statement.
+      reset_n = 1;
+|
+halcheck: *W,IMPDTC (./carparking_tb.v,46|0): Expression '1' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit tb_parking_system.
+      reset_n = 1;
+|
+halcheck: *W,INTTOB (./carparking_tb.v,46|0): Assigning a 0 or 1 (32 bits) to a single-bit variable in module/design-unit tb_parking_system.
+      reset_n = 1;
+|
+halcheck: *W,TRUNCZ (./carparking_tb.v,46|0): Truncation in constant conversion without a loss of bits in module/design-unit tb_parking_system.
+ #20;
+|
+halcheck: *W,EMPSTM (./carparking_tb.v,47|0): Module 'tb_parking_system' contains an empty statement.
+ sensor_entrance = 1;
+|
+halcheck: *W,IMPDTC (./carparking_tb.v,48|0): Expression '1' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit tb_parking_system.
+ sensor_entrance = 1;
+|
+halcheck: *W,INTTOB (./carparking_tb.v,48|0): Assigning a 0 or 1 (32 bits) to a single-bit variable in module/design-unit tb_parking_system.
+ sensor_entrance = 1;
+|
+halcheck: *W,TRUNCZ (./carparking_tb.v,48|0): Truncation in constant conversion without a loss of bits in module/design-unit tb_parking_system.
+ #1000;
+|
+halcheck: *W,EMPSTM (./carparking_tb.v,49|0): Module 'tb_parking_system' contains an empty statement.
+ sensor_entrance = 0;
+|
+halcheck: *W,IMPDTC (./carparking_tb.v,50|0): Expression '0' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit tb_parking_system.
+ sensor_entrance = 0;
+|
+halcheck: *W,INTTOB (./carparking_tb.v,50|0): Assigning a 0 or 1 (32 bits) to a single-bit variable in module/design-unit tb_parking_system.
+ sensor_entrance = 0;
+|
+halcheck: *W,TRUNCZ (./carparking_tb.v,50|0): Truncation in constant conversion without a loss of bits in module/design-unit tb_parking_system.
+ password_1 = 1;
+|
+halcheck: *W,IMPDTC (./carparking_tb.v,51|0): Expression '1' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit tb_parking_system.
+ password_1 = 1;
+|
+halcheck: *W,TRUNCZ (./carparking_tb.v,51|0): Truncation in constant conversion without a loss of bits in module/design-unit tb_parking_system.
+ password_2 = 2;
+|
+halcheck: *W,IMPDTC (./carparking_tb.v,52|0): Expression '2' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit tb_parking_system.
+ password_2 = 2;
+|
+halcheck: *W,TRUNCZ (./carparking_tb.v,52|0): Truncation in constant conversion without a loss of bits in module/design-unit tb_parking_system.
+ password_2 = 2;
+|
+halcheck: *W,CONSBS (./carparking_tb.v,52|0): Base ('d, 'b, 'h, 'o) not specified for constant 2 in module/design-unit tb_parking_system.
+ #2000;
+|
+halcheck: *W,EMPSTM (./carparking_tb.v,53|0): Module 'tb_parking_system' contains an empty statement.
+ sensor_exit =1;
+|
+halcheck: *W,IMPDTC (./carparking_tb.v,54|0): Expression '1' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit tb_parking_system.
+ sensor_exit =1;
+|
+halcheck: *W,INTTOB (./carparking_tb.v,54|0): Assigning a 0 or 1 (32 bits) to a single-bit variable in module/design-unit tb_parking_system.
+ sensor_exit =1;
+|
+halcheck: *W,TRUNCZ (./carparking_tb.v,54|0): Truncation in constant conversion without a loss of bits in module/design-unit tb_parking_system.
+  parking_system uut (
+|
+halcheck: *N,IDLENG (./carparking_tb.v,21|0): Identifier name 'uut' is not of appropriate length (4 to 16 characters).
+module parking_system( 
+|
+halcheck: *W,DIFFMN (./carparking_tb.v,62|0): Module name 'parking_system' differs from file name 'carparking_tb.v'.
+module parking_system( 
+|
+halcheck: *W,MULTMF (./carparking_tb.v,62|0): More than one design-unit definition in file 'carparking_tb.v'.
+module parking_system( 
+|
+halcheck: *N,PRTCNT (./carparking_tb.v,62|0): Module/Entity 'parking_system' contains '10' ports.
+halcheck: (./carparking_tb.v,62): Number of Input ports: 6.
+halcheck: (./carparking_tb.v,62): Number of Output ports: 4.
+                input clk,reset_n,
+|
+halcheck: *N,DECLIN (./carparking_tb.v,63|0): Use a separate line for each HDL declaration.
+ input sensor_entrance, sensor_exit, 
+|
+halcheck: *N,DECLIN (./carparking_tb.v,64|0): Use a separate line for each HDL declaration.
+ input [1:0] password_1, password_2,
+|
+halcheck: *W,NUMSUF (./carparking_tb.v,65|0): Identifier 'password_1' has a numeric value suffix.
+ input [1:0] password_1, password_2,
+|
+halcheck: *W,STYVAL (./carparking_tb.v,65|0): Numeric value '1' used for identifier 'password_1'. Use constants to avoid portability issues.
+ input [1:0] password_1, password_2,
+|
+halcheck: *W,NUMSUF (./carparking_tb.v,65|0): Identifier 'password_2' has a numeric value suffix.
+ input [1:0] password_1, password_2,
+|
+halcheck: *N,DECLIN (./carparking_tb.v,65|0): Use a separate line for each HDL declaration.
+ output wire GREEN_LED,RED_LED,
+|
+halcheck: *N,DECLIN (./carparking_tb.v,66|0): Use a separate line for each HDL declaration.
+ output reg [6:0] HEX_1, HEX_2
+|
+halcheck: *W,NUMSUF (./carparking_tb.v,67|0): Identifier 'HEX_1' has a numeric value suffix.
+ output reg [6:0] HEX_1, HEX_2
+|
+halcheck: *W,STYVAL (./carparking_tb.v,67|0): Numeric value '6' used for identifier 'HEX_1'. Use constants to avoid portability issues.
+ output reg [6:0] HEX_1, HEX_2
+|
+halcheck: *W,NUMSUF (./carparking_tb.v,67|0): Identifier 'HEX_2' has a numeric value suffix.
+ output reg [6:0] HEX_1, HEX_2
+|
+halcheck: *N,DECLIN (./carparking_tb.v,67|0): Use a separate line for each HDL declaration.
+ output wire GREEN_LED,RED_LED,
+|
+halcheck: *W,LCVARN (./carparking_tb.v,66|0): Net name 'GREEN_LED' uses uppercase characters.
+ output wire GREEN_LED,RED_LED,
+|
+halcheck: *W,LCVARN (./carparking_tb.v,66|0): Net name 'RED_LED' uses uppercase characters.
+ output reg [6:0] HEX_1, HEX_2
+|
+halcheck: *W,LCVARN (./carparking_tb.v,67|0): Register name 'HEX_1' uses uppercase characters.
+ output reg [6:0] HEX_1, HEX_2
+|
+halcheck: *W,LCVARN (./carparking_tb.v,67|0): Register name 'HEX_2' uses uppercase characters.
+ reg[2:0] current_state, next_state;
+|
+halcheck: *W,STYVAL (./carparking_tb.v,71|0): Numeric value '2' used for identifier 'current_state'. Use constants to avoid portability issues.
+ reg[31:0] counter_wait;
+|
+halcheck: *W,STYVAL (./carparking_tb.v,72|0): Numeric value '31' used for identifier 'counter_wait'. Use constants to avoid portability issues.
+ begin
+|
+halcheck: *W,NOBLKN (./carparking_tb.v,76|0): Each block should be labeled with a meaningful name.
+ if(~reset_n) 
+|
+halcheck: *W,NBGEND (./carparking_tb.v,77|0): Missing begin/end statement in the 'if' block.
+ if(~reset_n) 
+|
+halcheck: *W,LOGNEG (./carparking_tb.v,77|0): Bit-wise negation in a conditional expression. Logical NOT may have been intended.
+ current_state = IDLE;
+|
+halcheck: *W,BLKSQB (./carparking_tb.v,78|0): Blocking assignment encountered in a sequential block.
+ current_state = next_state;
+|
+halcheck: *W,BLKSQB (./carparking_tb.v,80|0): Blocking assignment encountered in a sequential block.
+ current_state = next_state;
+|
+halcheck: *W,REVROP (./carparking_tb.v,80|0): Register 'next_state' is being read/assigned outside the process in which it was assigned using a blocking assignment.
+halcheck: (./carparking_tb.v,94): Assigned using blocking assignment in this process.
+ begin
+|
+halcheck: *W,NOBLKN (./carparking_tb.v,84|0): Each block should be labeled with a meaningful name.
+ if(~reset_n) 
+|
+halcheck: *W,NBGEND (./carparking_tb.v,85|0): Missing begin/end statement in the 'if' block.
+ if(~reset_n) 
+|
+halcheck: *W,LOGNEG (./carparking_tb.v,85|0): Bit-wise negation in a conditional expression. Logical NOT may have been intended.
+ counter_wait <= 0;
+|
+halcheck: *W,IMPDTC (./carparking_tb.v,86|0): Expression '0' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit uut.
+ else if(current_state==WAIT_PASSWORD)
+|
+halcheck: *W,NBGEND (./carparking_tb.v,87|0): Missing begin/end statement in the 'if' block.
+ else if(current_state==WAIT_PASSWORD)
+|
+halcheck: *W,REVROP (./carparking_tb.v,87|0): Register 'current_state' is being read/assigned outside the process in which it was assigned using a blocking assignment.
+halcheck: (./carparking_tb.v,75): Assigned using blocking assignment in this process.
+ counter_wait <= counter_wait + 1;
+|
+halcheck: *W,IMPTYP (./carparking_tb.v,88|0): Expression 'counter_wait + 1' implicitly converted to type 'register' from type 'integer'.
+ counter_wait <= counter_wait + 1;
+|
+halcheck: *W,LRGOPR (./carparking_tb.v,88|0): Arithmetic or relational operation performed on large operands in module/design-unit uut.
+ counter_wait <= 0;
+|
+halcheck: *W,IMPDTC (./carparking_tb.v,90|0): Expression '0' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit uut.
+ begin
+|
+halcheck: *W,NOBLKN (./carparking_tb.v,95|0): Each block should be labeled with a meaningful name.
+ case(current_state)
+|
+halcheck: *W,REVROP (./carparking_tb.v,96|0): Register 'current_state' is being read/assigned outside the process in which it was assigned using a blocking assignment.
+halcheck: (./carparking_tb.v,75): Assigned using blocking assignment in this process.
+         if(sensor_entrance == 1)
+|
+halcheck: *W,NBGEND (./carparking_tb.v,98|0): Missing begin/end statement in the 'if' block.
+         if(sensor_entrance == 1)
+|
+halcheck: *W,ULCMPE (./carparking_tb.v,98|0): Unequal length operands in equality operator encountered (padding produces incorrect result) in module/design-unit uut. LHS operand is 1 bits, RHS operand is 32 bits.
+ if(counter_wait <= 3)
+|
+halcheck: *W,NBGEND (./carparking_tb.v,104|0): Missing begin/end statement in the 'if' block.
+ if(counter_wait <= 3)
+|
+halcheck: *W,LRGOPR (./carparking_tb.v,104|0): Arithmetic or relational operation performed on large operands in module/design-unit uut.
+ if((password_1==2'b01)&&(password_2==2'b10))
+|
+halcheck: *W,NBGEND (./carparking_tb.v,108|0): Missing begin/end statement in the 'if' block.
+ if((password_1==2'b01)&&(password_2==2'b10))
+|
+halcheck: *W,NBGEND (./carparking_tb.v,115|0): Missing begin/end statement in the 'if' block.
+ if(sensor_entrance==1 && sensor_exit == 1)
+|
+halcheck: *W,NBGEND (./carparking_tb.v,121|0): Missing begin/end statement in the 'if' block.
+ if(sensor_entrance==1 && sensor_exit == 1)
+|
+halcheck: *W,ULCMPE (./carparking_tb.v,121|0): Unequal length operands in equality operator encountered (padding produces incorrect result) in module/design-unit uut. LHS operand is 1 bits, RHS operand is 32 bits.
+ else if(sensor_exit == 1)
+|
+halcheck: *W,NBGEND (./carparking_tb.v,123|0): Missing begin/end statement in the 'if' block.
+ else if(sensor_exit == 1)
+|
+halcheck: *W,ULCMPE (./carparking_tb.v,123|0): Unequal length operands in equality operator encountered (padding produces incorrect result) in module/design-unit uut. LHS operand is 1 bits, RHS operand is 32 bits.
+ if((password_1==2'b01)&&(password_2==2'b10))
+|
+halcheck: *W,NBGEND (./carparking_tb.v,129|0): Missing begin/end statement in the 'if' block.
+ always @(posedge clk) begin 
+|
+halcheck: *W,NOBLKN (./carparking_tb.v,138|0): Each block should be labeled with a meaningful name.
+ case(current_state)
+|
+halcheck: *E,CDEFNC (./carparking_tb.v,139|0): Case statement without a default clause.
+ case(current_state)
+|
+halcheck: *W,REVROP (./carparking_tb.v,139|0): Register 'current_state' is being read/assigned outside the process in which it was assigned using a blocking assignment.
+halcheck: (./carparking_tb.v,75): Assigned using blocking assignment in this process.
+ green_tmp = 1'b0;
+|
+halcheck: *W,BLKSQB (./carparking_tb.v,141|0): Blocking assignment encountered in a sequential block.
+ red_tmp = 1'b0;
+|
+halcheck: *W,BLKSQB (./carparking_tb.v,142|0): Blocking assignment encountered in a sequential block.
+ HEX_1 = 7'b1111111; // off
+|
+halcheck: *W,BLKSQB (./carparking_tb.v,143|0): Blocking assignment encountered in a sequential block.
+ HEX_2 = 7'b1111111; // off
+|
+halcheck: *W,BLKSQB (./carparking_tb.v,144|0): Blocking assignment encountered in a sequential block.
+ green_tmp = 1'b0;
+|
+halcheck: *W,BLKSQB (./carparking_tb.v,147|0): Blocking assignment encountered in a sequential block.
+ red_tmp = 1'b1;
+|
+halcheck: *W,BLKSQB (./carparking_tb.v,148|0): Blocking assignment encountered in a sequential block.
+ HEX_1 = 7'b000_0110; // E
+|
+halcheck: *W,BLKSQB (./carparking_tb.v,149|0): Blocking assignment encountered in a sequential block.
+ HEX_2 = 7'b010_1011; // n 
+|
+halcheck: *W,BLKSQB (./carparking_tb.v,150|0): Blocking assignment encountered in a sequential block.
+ green_tmp = 1'b0;
+|
+halcheck: *W,BLKSQB (./carparking_tb.v,153|0): Blocking assignment encountered in a sequential block.
+ red_tmp = ~red_tmp;
+|
+halcheck: *W,BLKSQB (./carparking_tb.v,154|0): Blocking assignment encountered in a sequential block.
+ red_tmp = ~red_tmp;
+|
+halcheck: *W,RDBFAS (./carparking_tb.v,154|0): Register 'red_tmp', assigned using blocking assignment, is being read before getting assigned.
+ HEX_1 = 7'b000_0110; // E
+|
+halcheck: *W,BLKSQB (./carparking_tb.v,155|0): Blocking assignment encountered in a sequential block.
+ HEX_2 = 7'b000_0110; // E 
+|
+halcheck: *W,BLKSQB (./carparking_tb.v,156|0): Blocking assignment encountered in a sequential block.
+ green_tmp = ~green_tmp;
+|
+halcheck: *W,BLKSQB (./carparking_tb.v,159|0): Blocking assignment encountered in a sequential block.
+ green_tmp = ~green_tmp;
+|
+halcheck: *W,RDBFAS (./carparking_tb.v,159|0): Register 'green_tmp', assigned using blocking assignment, is being read before getting assigned.
+ red_tmp = 1'b0;
+|
+halcheck: *W,BLKSQB (./carparking_tb.v,160|0): Blocking assignment encountered in a sequential block.
+ HEX_1 = 7'b000_0010; // 6
+|
+halcheck: *W,BLKSQB (./carparking_tb.v,161|0): Blocking assignment encountered in a sequential block.
+ HEX_2 = 7'b100_0000; // 0 
+|
+halcheck: *W,BLKSQB (./carparking_tb.v,162|0): Blocking assignment encountered in a sequential block.
+ green_tmp = 1'b0;
+|
+halcheck: *W,BLKSQB (./carparking_tb.v,165|0): Blocking assignment encountered in a sequential block.
+ red_tmp = ~red_tmp;
+|
+halcheck: *W,BLKSQB (./carparking_tb.v,166|0): Blocking assignment encountered in a sequential block.
+ red_tmp = ~red_tmp;
+|
+halcheck: *W,RDBFAS (./carparking_tb.v,166|0): Register 'red_tmp', assigned using blocking assignment, is being read before getting assigned.
+ HEX_1 = 7'b001_0010; // 5
+|
+halcheck: *W,BLKSQB (./carparking_tb.v,167|0): Blocking assignment encountered in a sequential block.
+ HEX_2 = 7'b000_1100; // P 
+|
+halcheck: *W,BLKSQB (./carparking_tb.v,168|0): Blocking assignment encountered in a sequential block.
+ assign RED_LED = red_tmp  ;
+|
+halcheck: *W,REVROP (./carparking_tb.v,172|0): Register 'red_tmp' is being read/assigned outside the process in which it was assigned using a blocking assignment.
+halcheck: (./carparking_tb.v,138): Assigned using blocking assignment in this process.
+ assign GREEN_LED = green_tmp;
+|
+halcheck: *W,REVROP (./carparking_tb.v,173|0): Register 'green_tmp' is being read/assigned outside the process in which it was assigned using a blocking assignment.
+halcheck: (./carparking_tb.v,138): Assigned using blocking assignment in this process.
+  wire GREEN_LED;
+|
+halcheck: *W,URDWIR (./carparking_tb.v,15|0): Wire 'GREEN_LED' defined in module 'tb_parking_system' does not drive any object, but is assigned at least once.
+  wire RED_LED;
+|
+halcheck: *W,URDWIR (./carparking_tb.v,16|0): Wire 'RED_LED' defined in module 'tb_parking_system' does not drive any object, but is assigned at least once.
+  wire [6:0] HEX_1;
+|
+halcheck: *W,URDWIR (./carparking_tb.v,17|0): Wire 'HEX_1' defined in module 'tb_parking_system' does not drive any object, but is assigned at least once.
+  wire [6:0] HEX_2;
+|
+halcheck: *W,URDWIR (./carparking_tb.v,18|0): Wire 'HEX_2' defined in module 'tb_parking_system' does not drive any object, but is assigned at least once.
+halcheck: Total errors   = 1.
+halcheck: Total warnings = 300.
+
+  ==========================================================================
+Performing synthesizability checks 
+
+cfe64: 15.20.051-s(15.20.s051): (c) Copyright 1995 - 2018 Cadence Design Systems, Inc.
+cfe64 Build : Mon May  7 17:15:12 IST 2018 ldvopt246
+halsynth: Loading design snapshot....
+halsynth: Traversing design hierarchy....
+ current_state = next_state;
+|
+halsynth: *N,FSMIDN (./carparking_tb.v,80|0): In module/design-unit 'parking_system', FSM for state register 'current_state' has been recognized.
+ always @(posedge clk or negedge reset_n)
+|
+halsynth: *W,BADFSM (./carparking_tb.v,75|0): In module/design-unit 'parking_system', FSM for state register 'current_state' does not adhere to modeling style guidelines.
+ always @(posedge clk or negedge reset_n) 
+|
+halsynth: (./carparking_tb.v,83|0): Source HDL information for the error/warning mentioned above.
+ always @(*)
+|
+halsynth: (./carparking_tb.v,94|0): Source HDL information for the error/warning mentioned above.
+ always @(posedge clk) begin 
+|
+halsynth: (./carparking_tb.v,138|0): Source HDL information for the error/warning mentioned above.
+ WAIT_PASSWORD: begin
+|
+halsynth: *W,TRNMBT (./carparking_tb.v,103|0): For the specified state '1', the state value changes by more than one bits on transition to state(s): 2.
+ next_state = WRONG_PASS;
+|
+halsynth: (./carparking_tb.v,111|0): Source HDL information for the error/warning mentioned above.
+ RIGHT_PASS: begin
+|
+halsynth: *W,TRNMBT (./carparking_tb.v,120|0): For the specified state '3', the state value changes by more than one bits on transition to state(s): 4, 0.
+ next_state = STOP;
+|
+halsynth: (./carparking_tb.v,122|0): Source HDL information for the error/warning mentioned above.
+ next_state = IDLE;
+|
+halsynth: (./carparking_tb.v,124|0): Source HDL information for the error/warning mentioned above.
+ STOP: begin
+|
+halsynth: *W,TRNMBT (./carparking_tb.v,128|0): For the specified state '4', the state value changes by more than one bits on transition to state(s): 3.
+ next_state = RIGHT_PASS;
+|
+halsynth: (./carparking_tb.v,130|0): Source HDL information for the error/warning mentioned above.
+module parking_system( 
+|
+halsynth: *W,EXTFSM (./carparking_tb.v,62|0): Extraneous logic present in module/design-unit 'parking_system' that encodes an FSM.
+ initial begin
+|
+halsynth: *W,INIUSP (./carparking_tb.v,33|0): Module tb_parking_system has an initial block or a variable declaration assignment, which is ignored by synthesis tools.
+ initial begin
+|
+halsynth: *W,INIUSP (./carparking_tb.v,37|0): Module tb_parking_system has an initial block or a variable declaration assignment, which is ignored by synthesis tools.
+halsynth: Total errors   = 0.
+halsynth: Total warnings = 7.
+
+  ==========================================================================
+Performing structural checks 
+
+halstruct(64): 15.20-s051: (c) Copyright 1995-2018 Cadence Design Systems, Inc.
+visadev(64): 15.20-s051: (c) Copyright 1995-2018 Cadence Design Systems, Inc.
+module parking_system( 
+|
+halstruct: *W,SYNASN (./carparking_tb.v,62|0): The module/design-unit 'parking_system' contains synchronous as well as asynchronous logic.
+halstruct: (./carparking_tb.v,134): One instance/occurence of asynchronous logic at 'tb_parking_system.uut.next_state'.
+halstruct: (./carparking_tb.v,80): One instance/occurence of synchronous logic at 'tb_parking_system.uut.current_state'.
+  parking_system uut (
+|
+halstruct: *E,UNCONI (./carparking_tb.v,21|0): Input port 'clk' of entity/module 'parking_system' is being used inside architecture/module, but not connected (either partially or completely) in its instance 'tb_parking_system.uut'.
+halstruct: (./carparking_tb.v,21): 'clk' mapped to actual expression 'clk' which is undriven.
+  parking_system uut (
+|
+halstruct: *E,UNCONI (./carparking_tb.v,21|0): Input port 'reset_n' of entity/module 'parking_system' is being used inside architecture/module, but not connected (either partially or completely) in its instance 'tb_parking_system.uut'.
+halstruct: (./carparking_tb.v,21): 'reset_n' mapped to actual expression 'reset_n' which is undriven.
+  parking_system uut (
+|
+halstruct: *E,UNCONI (./carparking_tb.v,21|0): Input port 'sensor_entrance' of entity/module 'parking_system' is being used inside architecture/module, but not connected (either partially or completely) in its instance 'tb_parking_system.uut'.
+halstruct: (./carparking_tb.v,21): 'sensor_entrance' mapped to actual expression 'sensor_entrance' which is undriven.
+  parking_system uut (
+|
+halstruct: *E,UNCONI (./carparking_tb.v,21|0): Input port 'sensor_exit' of entity/module 'parking_system' is being used inside architecture/module, but not connected (either partially or completely) in its instance 'tb_parking_system.uut'.
+halstruct: (./carparking_tb.v,21): 'sensor_exit' mapped to actual expression 'sensor_exit' which is undriven.
+  parking_system uut (
+|
+halstruct: *E,UNCONI (./carparking_tb.v,21|0): Input port 'password_1' of entity/module 'parking_system' is being used inside architecture/module, but not connected (either partially or completely) in its instance 'tb_parking_system.uut'.
+halstruct: (./carparking_tb.v,21): 'password_1[1:0]' mapped to actual expression 'password_1' which is undriven.
+  parking_system uut (
+|
+halstruct: *E,UNCONI (./carparking_tb.v,21|0): Input port 'password_2' of entity/module 'parking_system' is being used inside architecture/module, but not connected (either partially or completely) in its instance 'tb_parking_system.uut'.
+halstruct: (./carparking_tb.v,21): 'password_2[1:0]' mapped to actual expression 'password_2' which is undriven.
+  parking_system uut (
+|
+halstruct: *W,UNCONO (./carparking_tb.v,21|0): Port 'GREEN_LED' (which is being used as an output) of entity/module 'parking_system' is being driven inside the design, but not connected (either partially or completely) in its instance 'tb_parking_system.uut'.
+  parking_system uut (
+|
+halstruct: *W,UNCONO (./carparking_tb.v,21|0): Port 'RED_LED' (which is being used as an output) of entity/module 'parking_system' is being driven inside the design, but not connected (either partially or completely) in its instance 'tb_parking_system.uut'.
+  parking_system uut (
+|
+halstruct: *W,UNCONO (./carparking_tb.v,21|0): Port 'HEX_1' (which is being used as an output) of entity/module 'parking_system' is being driven inside the design, but not connected (either partially or completely) in its instance 'tb_parking_system.uut'.
+  parking_system uut (
+|
+halstruct: *W,UNCONO (./carparking_tb.v,21|0): Port 'HEX_2' (which is being used as an output) of entity/module 'parking_system' is being driven inside the design, but not connected (either partially or completely) in its instance 'tb_parking_system.uut'.
+ current_state = next_state;
+|
+halstruct: *N,FFASRT (./carparking_tb.v,80|0): Flip-flop 'current_state' has an asynchronous reset 'reset_n'.
+                input clk,reset_n,
+|
+halstruct: *N,CLKINF (./carparking_tb.v,63|0): Signal 'tb_parking_system.uut.clk' was inferred as clock.
+halstruct: (./carparking_tb.v,63): Clock source is signal 'tb_parking_system.uut.clk'.
+halstruct: (./carparking_tb.v,80): Drives the flip-flop 'tb_parking_system.uut.current_state'.
+ current_state = next_state;
+|
+halstruct: *W,ACNCPI (./carparking_tb.v,80|0): Asynchronous reset 'reset_n' of latch/flip-flop 'tb_parking_system.uut.current_state' is not controllable from primary inputs.
+ current_state = next_state;
+|
+halstruct: *W,CLKNPI (./carparking_tb.v,80|0): Flip-flop 'tb_parking_system.uut.current_state' has clock 'clk' which is not derived from primary input.
+halstruct: (./carparking_tb.v,7): Derived from local variable 'clk'.
+ counter_wait <= 0;
+|
+halstruct: *N,FFASRT (./carparking_tb.v,90|0): Flip-flop 'counter_wait' has an asynchronous reset 'reset_n'.
+ green_tmp = 1'b0;
+|
+halstruct: *W,FFWNSR (./carparking_tb.v,165|0): Flip-flop 'green_tmp' does not have any set or reset.
+ red_tmp = ~red_tmp;
+|
+halstruct: *W,FFWNSR (./carparking_tb.v,166|0): Flip-flop 'red_tmp' does not have any set or reset.
+ HEX_1 = 7'b001_0010; // 5
+|
+halstruct: *W,FFWNSR (./carparking_tb.v,167|0): Flip-flop 'HEX_1' does not have any set or reset.
+ HEX_2 = 7'b000_1100; // P 
+|
+halstruct: *W,FFWNSR (./carparking_tb.v,168|0): Flip-flop 'HEX_2' does not have any set or reset.
+module tb_parking_system;
+|
+halstruct: *N,NUMDFF (./carparking_tb.v,4|0): Number of single-bit D flip-flops present in the hierarchy is 51.
+halstruct: Design facts generated in 'hal.design_facts'.
+halstruct: Total errors   = 6.
+halstruct: Total warnings = 11.
+
+  ==========================================================================
+
+Analysis summary :
+
+ Errors   : (7)
+  CDEFNC (1)      UNCONI (6)     
+
+ Warnings : (318)
+  ACNCPI (1)      BADFSM (1)      BLKSQB (22)     CLKNPI (1)     
+  CONSBS (1)      CTLCHR (172)    DIFFMN (2)      EMPSTM (4)     
+  EXTFSM (1)      FFWNSR (4)      IMPDTC (14)     IMPTYP (1)     
+  INIUSP (2)      INTTOB (8)      LCVARN (8)      LOGNEG (2)     
+  LRGOPR (2)      MAXLEN (1)      MULTMF (1)      NBGEND (10)    
+  NEEDIO (1)      NOBLKN (6)      NUMSUF (8)      RDBFAS (3)     
+  REVROP (6)      SEPLIN (1)      STYVAL (8)      SYNASN (1)     
+  TRNMBT (3)      TRUNCZ (12)     ULCMPE (3)      UNCONO (4)     
+  URDWIR (4)     
+
+ Notes    : (14)
+  CDNOTE (1)      CLKINF (1)      DECLIN (5)      FFASRT (2)     
+  FSMIDN (1)      IDLENG (2)      NUMDFF (1)      PRTCNT (1)     
+
+Analysis complete.
+
+ ==========================================================================
+
+To analyze results, run following command :
+    ncbrowse -64bit -cdslib /home/adld27/sam/CarParking/cds.lib -sortby severity -sortby category -sortby tag hal.log
+
