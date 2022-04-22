@@ -1,0 +1,5 @@
+set -tmpdir "C:/Users/C0MPUTER/Desktop/PWM-generator-using-verilog-master/PWMGenerator1/xst/projnav.tmp"
+set -xsthdpdir "C:/Users/C0MPUTER/Desktop/PWM-generator-using-verilog-master/PWMGenerator1/xst"
+elaborate
+-ifn pwm_basic.prj
+-ifmt mixed
