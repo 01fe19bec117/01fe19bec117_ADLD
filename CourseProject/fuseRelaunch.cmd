@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "C:/Users/C0MPUTER/Desktop/PWM-generator-using-verilog-master/PWMGenerator1/pwm_basic_tb_isim_beh.exe" -prj "C:/Users/C0MPUTER/Desktop/PWM-generator-using-verilog-master/PWMGenerator1/pwm_basic_tb_beh.prj" "work.pwm_basic_tb" "work.glbl" 
